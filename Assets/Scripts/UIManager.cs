@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     public Text Vitoria;
     public GameObject p1, p2, menuPause, menuConfig, telaVitoria;
     public Transform adagasp1, adagasp2;
-    public Transform hpp1, hpp2, pla1, pla2;
     bool estaPausado;
 
 

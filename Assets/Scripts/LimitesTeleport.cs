@@ -9,7 +9,7 @@ public class LimitesTeleport : MonoBehaviour
     // Start is called before the first frame update
     
     public GameObject limDir, limEsq;
-    public Transform p1, p2, direita, esquerda, baixo, cima;
+    public Transform p1, p2, direita, esquerda, cima;
     void Start()
     {
        
@@ -37,12 +37,7 @@ public class LimitesTeleport : MonoBehaviour
         {
             p2.position = new Vector2(direita.position.x, p2.position.y);
         }
-        
-        /*
-        if(p1.position.y < baixo.position.y)
-        {
-            p1.position = new Vector2(p1.position.x, cima.position.y);
-        }*/
+
     }
 
 

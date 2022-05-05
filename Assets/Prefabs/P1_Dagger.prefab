@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1365953838887177168}
   - component: {fileID: 1365953838887177169}
   - component: {fileID: 1365953838887177174}
-  - component: {fileID: 4572320775393593482}
+  - component: {fileID: 1245583563545045032}
   m_Layer: 0
   m_Name: P1_Dagger
   m_TagString: Adaga
@@ -97,7 +97,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.015497408
+  m_Mass: 0.054179683
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5883593, y: 0.18793073}
   m_EdgeRadius: 0
---- !u!114 &4572320775393593482
+--- !u!114 &1245583563545045032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1365953838887177175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb17e773d15a4540ad28c76f5b66008, type: 3}
+  m_Script: {fileID: 11500000, guid: e2dadb69a3840a240b3261254e405f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  veloAdaga: 8
+  veloAdaga: 0
   adx1: 0
   adx2: 0
   hp2: 0

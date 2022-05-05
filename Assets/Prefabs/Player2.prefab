@@ -42,9 +42,8 @@ GameObject:
   - component: {fileID: 5174760509454315590}
   - component: {fileID: 5174760509454315591}
   - component: {fileID: 5174760509454315584}
-  - component: {fileID: 5174760509454315588}
-  - component: {fileID: 5174760509454315595}
   - component: {fileID: 5174760509454315594}
+  - component: {fileID: 7193660632578330140}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -168,43 +167,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4623149, y: 1.1739917}
   m_EdgeRadius: 0
---- !u!114 &5174760509454315588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5174760509454315585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24bed9801b6955a4cbd01203722d3cd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 100
-  p1: {fileID: 0}
-  p2: {fileID: 5174760509454315585}
-  adaga: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
-  velo: 0
-  shotTimer: 1.5
-  shotTimer2: 1.5
-  adagaQtd: 0
-  adagaQtd2: 0
-  isGrounded: 0
---- !u!114 &5174760509454315595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5174760509454315585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5bb1d30ff51eb47951941722edd9f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidade: 5
-  animator: {fileID: 5174760509454315594}
-  r_chao: 0
 --- !u!95 &5174760509454315594
 Animator:
   serializedVersion: 3
@@ -224,6 +186,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7193660632578330140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174760509454315585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfc3f618f6202f4599f90c6332be2fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 4
+  animator: {fileID: 5174760509454315594}
+  r_chao: 0
 --- !u!1 &5174760509571669740
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5174760509571669651}
   - component: {fileID: 5174760509571669650}
-  - component: {fileID: 5174760509571669649}
+  - component: {fileID: 7684230881333459702}
   m_Layer: 0
   m_Name: DetectorChao2
   m_TagString: Player2
@@ -282,7 +259,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4335643, y: 0.003185127}
   m_EdgeRadius: 0
---- !u!114 &5174760509571669649
+--- !u!114 &7684230881333459702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,10 +268,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5174760509571669740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310826ae99cec224294a8d4721e6ad5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 12c340ee6226cb04d9a32cc676472b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chao: 0
 --- !u!1 &5174760509859372371
 GameObject:
   m_ObjectHideFlags: 0

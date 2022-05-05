@@ -102,11 +102,8 @@ GameObject:
   - component: {fileID: 8757843599845629868}
   - component: {fileID: 8757843599845629858}
   - component: {fileID: 8757843599845629869}
-  - component: {fileID: 8757843599845629870}
-  - component: {fileID: 8757843599845629865}
   - component: {fileID: 8757843599845629864}
-  - component: {fileID: 925464453757976955}
-  - component: {fileID: 2380124827926114353}
+  - component: {fileID: 7915466096146190948}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -230,43 +227,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8757843599845629870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757843599845629859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24bed9801b6955a4cbd01203722d3cd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 100
-  p1: {fileID: 8757843599845629859}
-  p2: {fileID: 0}
-  adaga: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
-  velo: 2
-  shotTimer: 1
-  shotTimer2: 1.5
-  adagaQtd: 0
-  adagaQtd2: 0
-  isGrounded: 0
---- !u!114 &8757843599845629865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757843599845629859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65e358a650651a644b5c31b4632569a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidade: 5
-  animator: {fileID: 8757843599845629864}
-  r_chao: 0
 --- !u!95 &8757843599845629864
 Animator:
   serializedVersion: 3
@@ -286,7 +246,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &925464453757976955
+--- !u!114 &7915466096146190948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,41 +255,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8757843599845629859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c37b8158cfd262146a75c0665802033c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9025ab32082b49646994fc82176eedc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 2380124827926114353}
-  PlayerName: {fileID: 0}
-  velocidade: 5
+  velocidade: 4
   animator: {fileID: 8757843599845629864}
   r_chao: 0
---- !u!114 &2380124827926114353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757843599845629859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  OwnerShipWasTransfered: 0
-  prefixBackup: -1
-  synchronization: 0
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
-  currentMasterID: -1
-  isRuntimeInstantiated: 0
 --- !u!1 &8757843599985632122
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8757843599985632101}
   - component: {fileID: 8757843599985632100}
-  - component: {fileID: 8757843599985632103}
+  - component: {fileID: 3290825980481145782}
   m_Layer: 0
   m_Name: DetectorChao1
   m_TagString: Player1
@@ -388,7 +319,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4335643, y: 0.00865441}
   m_EdgeRadius: 0
---- !u!114 &8757843599985632103
+--- !u!114 &3290825980481145782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,7 +328,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8757843599985632122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310826ae99cec224294a8d4721e6ad5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 12c340ee6226cb04d9a32cc676472b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chao: 0
