@@ -764,7 +764,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369169964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c0c790dd2bf0a14a9f6eaaf2f1744f5, type: 3}
   m_Name: 
@@ -773,6 +773,8 @@ MonoBehaviour:
   p1: {fileID: 981261590}
   p2: {fileID: 2053016338}
   adaga: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
+  goAdaga: {fileID: 0}
+  goAdaga2: {fileID: 0}
   velo: 0
   shotTimer: 1.5
   shotTimer2: 1.5
@@ -4469,6 +4471,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 369169966}
     m_Modifications:
+    - target: {fileID: 8593937079643784604, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: p2
+      value: 
+      objectReference: {fileID: 2053016338}
+    - target: {fileID: 8593937079643784604, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: goAdaga
+      value: 
+      objectReference: {fileID: 227533785}
+    - target: {fileID: 8593937079643784604, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757843599845629858, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: m_Name
       value: Player1

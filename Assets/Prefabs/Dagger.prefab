@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2dadb69a3840a240b3261254e405f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  veloAdaga: 0
-  adx1: 0
-  adx2: 0
-  hp2: 0
+  rb: {fileID: 1365953838887177169}
+  veloAdaga: 5
+  player: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  Player2: {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
