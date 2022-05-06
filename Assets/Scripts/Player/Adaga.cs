@@ -8,7 +8,7 @@ public class Adaga : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     public float veloAdaga;
     [SerializeField] GameObject player, Player2;
-    
+
     void Awake()
     {
         //this.transform.rotation = new Vector3 (0,0,90);
@@ -24,18 +24,18 @@ public class Adaga : MonoBehaviour
     void FixedUpdate()
     {   
         rb.velocity = transform.right * veloAdaga;
-    
 
 
 
-        //if(gameObject.transform.position.x > direita.transform.position.x)
-        //{
-        //    gameObject.transform.position = new Vector2(esquerda.transform.position.x, gameObject.transform.position.y);
-        //}
-        //else if(gameObject.transform.position.x < esquerda.transform.position.x)
-        //{
-        //    gameObject.transform.position = new Vector2(direita.transform.position.x, gameObject.transform.position.y);
-        //}
+
+        if (gameObject.transform.position.x > 0.5f)
+        {
+            gameObject.transform.position = new Vector2(-16.88f, gameObject.transform.position.y);
+        }
+        else if (gameObject.transform.position.x < -16.88f)
+        {
+            gameObject.transform.position = new Vector2(0.5f, gameObject.transform.position.y);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
