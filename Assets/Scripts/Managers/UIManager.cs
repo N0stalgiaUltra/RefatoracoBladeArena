@@ -20,28 +20,28 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      telaVitoria.SetActive(false);
+        telaVitoria.SetActive(false);
         FindObjectOfType<AudioManager>().Stop("MusicaVitoria");
     }
 
     // Update is called once per frame
     void Update()
     {
-        int qtdAdagas1 = p1.GetComponent<PlayerManager>().adagaQtd;
-        estaPausado = pauseMenu.pausado;
-        if(qtdAdagas1 != 0f)
-        {
-            adagasText.text = $"Adagas: {qtdAdagas1}";
-        }
-        else
-        {
-            adagasText.text = "Recarregando";
-        }
-        //p1Hp.text = $" HP: {p1.GetComponent<PlayerManager>().hp}";
+        //int qtdAdagas1 = p1.GetComponent<PlayerManager>().adagaQtd;
+        //estaPausado = pauseMenu.pausado;
+        //if(qtdAdagas1 != 0f)
+        //{
+        //    adagasText.text = $"Adagas: {qtdAdagas1}";
+        //}
+        //else
+        //{
+        //    adagasText.text = "Recarregando";
+        //}
+        ////p1Hp.text = $" HP: {p1.GetComponent<PlayerManager>().hp}";
         
 
-        //p2Hp.text = $" HP: {p2.GetComponent<PlayerManager>().hp}";
-        adagasText2.text = $"Adagas: {p2.GetComponent<PlayerManager>().adagaQtd2}";
+        ////p2Hp.text = $" HP: {p2.GetComponent<PlayerManager>().hp}";
+        //adagasText2.text = $"Adagas: {p2.GetComponent<PlayerManager>().adagaQtd2}";
 
         placar1.text = $"{GameManager.Instance.placar1}";
         placar2.text = $"{GameManager.Instance.placar2}";

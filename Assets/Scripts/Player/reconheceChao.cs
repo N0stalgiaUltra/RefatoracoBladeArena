@@ -15,7 +15,7 @@ public class reconheceChao : MonoBehaviour
             chao = true;
         }    
         
-        if(other.gameObject.tag == "Plataforma3")
+        if(other.gameObject.tag == "Plataforma2")
         {
             chao = true;
         }    
@@ -26,7 +26,7 @@ public class reconheceChao : MonoBehaviour
         {
             chao = false;
         } 
-        if(other.gameObject.tag == "Plataforma3")
+        if(other.gameObject.tag == "Plataforma2")
         {
             chao = false;
         }       

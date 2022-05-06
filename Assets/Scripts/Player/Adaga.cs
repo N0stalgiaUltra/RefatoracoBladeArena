@@ -9,9 +9,6 @@ public class Adaga : MonoBehaviour
     
     public float veloAdaga; 
     GameObject player, Player2, posAdaga, posAdaga2,direita, esquerda;
-    public float adx1, adx2;
-    public int hp2;
-    // Start is called before the first frame update
     
     void Awake()
     {
@@ -33,7 +30,6 @@ public class Adaga : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * veloAdaga;
     
 
@@ -51,7 +47,7 @@ public class Adaga : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         
-        if(other.gameObject.tag == "Player1")
+        if(other.gameObject.CompareTag("Player1"))
         {
             
             FindObjectOfType<AudioManager>().Play("AlteraPlacar");
@@ -65,7 +61,7 @@ public class Adaga : MonoBehaviour
 
         }
         
-         if(other.gameObject.tag == "Player2")
+         if(other.gameObject.CompareTag("Player2"))
         {
             FindObjectOfType<AudioManager>().Play("AlteraPlacar");
             GameManager.Instance.placar1++;
@@ -75,18 +71,18 @@ public class Adaga : MonoBehaviour
             if(player2.GetComponent<PlayerManager>().hp <= 0f)
             Destroy(player2);*/
         }
-        if(other.gameObject.tag == "Adaga")
+        if(other.gameObject.CompareTag("Adaga"))
         {
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("ColisaoAdaga");
         }
         
-        if(other.gameObject.tag == "Plataforma")
+        if(other.gameObject.CompareTag("Plataforma"))
         {
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
         }
-        if(other.gameObject.tag == "Plataforma2")
+        if(other.gameObject.CompareTag("Plataforma2"))
         {
            Destroy(gameObject);
            FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");

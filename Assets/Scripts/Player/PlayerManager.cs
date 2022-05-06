@@ -42,29 +42,27 @@ public class PlayerManager : MonoBehaviour
 
         if(estaPausado == false) 
         {
-            /*
-            if(Input.GetButtonDown("Fire1") && this.gameObject == p1)
+
+            //if (Input.GetButtonDown("Fire1") && this.gameObject == p1)
+            //{
+            //    if (shotTimer <= 0f)
+            //    {
+            //        GameObject a = Instantiate(adaga, goAdaga.transform.position, goAdaga.transform.rotation);
+            //        FindObjectOfType<AudioManager>().Play("LancaAdaga");
+            //        Destroy(a, 3.5f);
+            //        //altera esse 
+            //        shotTimer = 0.5f;
+            //        adagaQtd--;
+            //        if (adagaQtd == 0)
+            //        {
+            //            shotTimer = 1f;
+            //            adagaQtd = 3;
+            //        }
+            //    }
+            //}
+
+            if (Input.GetButtonDown("Fire2") && this.gameObject == p2)
             {
-                //BombaManager.Instance.ColocaBombaP1(); 
-                if(shotTimer <= 0f)
-                {
-                    GameObject a = Instantiate(adaga, goAdaga.transform.position, goAdaga.transform.rotation);  
-                    FindObjectOfType<AudioManager>().Play("LancaAdaga");
-                    Destroy(a, 3.5f);
-                    //altera esse 
-                    shotTimer = 0.5f;
-                    adagaQtd--;
-                    if(adagaQtd == 0)
-                    {
-                        shotTimer = 1f;
-                        adagaQtd = 3;
-                    }   
-                }
-            }*/
-        
-            if(Input.GetButtonDown("Fire2") && this.gameObject == p2)
-            {
-                //BombaManager.Instance.ColocaBombaP2(); 
                 if(shotTimer2 <= 0f)
                 {
                     GameObject b = Instantiate(adaga, goAdaga2.transform.position, goAdaga2.transform.rotation);    

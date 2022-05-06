@@ -43,4 +43,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44213cda8490dfd4bba5d33c2c8ccffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sons: []
+  sons:
+  - nome: MusicaMenu
+    som: {fileID: 8300000, guid: 5ff72374e6bd9da46870474d74dcd8f6, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - nome: MusicaVitoria
+    som: {fileID: 8300000, guid: fcd41604e55a4eb4abf69f6700e5f569, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - nome: MusicaFundo
+    som: {fileID: 8300000, guid: 1ac8271e27c2fef4fb7643f5bb33e6ba, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - nome: AbreMenu
+    som: {fileID: 8300000, guid: f8b075696a1c14c4794ab483b741577d, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - nome: ClicaBotao
+    som: {fileID: 8300000, guid: 7d0122e73a8eee24c89a3070e6fa8d2c, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - nome: ColisaoAdaga
+    som: {fileID: 8300000, guid: 082e47e1e910624469bc6e010db2ff25, type: 3}
+    volume: 0
+    pitch: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - nome: ColisaoPlataforma
+    som: {fileID: 8300000, guid: 7e8efa44bcb46c34b8824ecb56d81a56, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - nome: AlteraPlacar
+    som: {fileID: 8300000, guid: 8d0fa1414571cbf45a526ae18a0255e9, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - nome: Passos
+    som: {fileID: 8300000, guid: 1544eeaf9c5b6224895af37bb4e589a4, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}

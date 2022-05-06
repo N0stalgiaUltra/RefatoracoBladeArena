@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8757843599985632101}
   - component: {fileID: 8757843599985632100}
-  - component: {fileID: 3290825980481145782}
+  - component: {fileID: 165310803}
   m_Layer: 0
   m_Name: DetectorChao1
   m_TagString: Player1
@@ -319,7 +319,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4335643, y: 0.00865441}
   m_EdgeRadius: 0
---- !u!114 &3290825980481145782
+--- !u!114 &165310803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8757843599985632122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12c340ee6226cb04d9a32cc676472b4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6571ecf40684e1b48905d8cb63c3a367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chao: 0
