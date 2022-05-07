@@ -44,11 +44,10 @@ public class PlayerManager : MonoBehaviour
         {
 
             //if (Input.GetButtonDown("Fire1") && this.gameObject == p1)
-            //{
-            //    GameObject a = Instantiate(adaga, goAdaga.transform.position, goAdaga.transform.rotation);
+            //{   
             //    if (shotTimer <= 0f)
             //    {
-                    
+            //        GameObject a = Instantiate(adaga, goAdaga.transform.position, goAdaga.transform.rotation);
             //        //FindObjectOfType<AudioManager>().Play("LancaAdaga");
             //        //Destroy(a, 3.5f);
             //        //altera esse 

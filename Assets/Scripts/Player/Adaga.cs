@@ -7,7 +7,8 @@ public class Adaga : MonoBehaviour
     
     [SerializeField] Rigidbody2D rb;
     public float veloAdaga;
-    [SerializeField] GameObject player, Player2;
+    [SerializeField] GameObject player, Player2, limitesContainer;
+    private Transform direita, esquerda;
 
     void Awake()
     {
@@ -16,8 +17,8 @@ public class Adaga : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindWithTag("Player1");
-        Player2 = GameObject.FindWithTag("Player2");       
+        direita = limitesContainer.transform.parent.GetChild(1);
+        esquerda = limitesContainer.transform.parent.GetChild(0);
     }
 
     // Update is called once per frame
@@ -25,16 +26,14 @@ public class Adaga : MonoBehaviour
     {   
         rb.velocity = transform.right * veloAdaga;
 
-
-
-
-        if (gameObject.transform.position.x > 0.5f)
+        if (gameObject.transform.position.x > direita.transform.position.x)
         {
-            gameObject.transform.position = new Vector2(-16.88f, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector2(esquerda.transform.position.x, gameObject.transform.position.y);
         }
-        else if (gameObject.transform.position.x < -16.88f)
+        else if (gameObject.transform.position.x < esquerda.transform.position.x)
         {
-            gameObject.transform.position = new Vector2(0.5f, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector2(direita.transform.position.x, gameObject.transform.position.y);
+
         }
     }
 

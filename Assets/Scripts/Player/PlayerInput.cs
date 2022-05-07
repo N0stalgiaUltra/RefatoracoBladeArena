@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
+public abstract class PlayerInput : MonoBehaviour
 {
     public enum PlayerType { PLAYER1, PLAYER2};
 
@@ -17,14 +17,20 @@ public class PlayerInput : MonoBehaviour
 
     }
     
-    public bool InputMove()
+    public float InputMove()
     {
-        return true;
+        if (this.playerType == PlayerType.PLAYER1)
+            return Input.GetAxisRaw("Horizontal");
+        else
+            return Input.GetAxisRaw("Horizontal2");
     }
     
     public bool InputJump()
     {
-        return true;
+        if (this.playerType == PlayerType.PLAYER1)
+            return Input.GetButtonDown("Jmp");
+        else
+            return Input.GetButtonDown("Jmp2");
     }
 }
 

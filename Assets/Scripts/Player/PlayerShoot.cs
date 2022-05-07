@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShoot : PlayerInput, IShoot 
+public class PlayerShoot : PlayerInput
 {
     [SerializeField] private GameObject dagger;
     [SerializeField] private Transform spawnDagger;

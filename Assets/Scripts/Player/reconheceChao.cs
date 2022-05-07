@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class reconheceChao : MonoBehaviour
+public class ReconheceChao : MonoBehaviour
 {
     public bool chao;
-
-
 
     void OnTriggerEnter2D ( Collider2D other)
     {
@@ -31,4 +29,5 @@ public class reconheceChao : MonoBehaviour
             chao = false;
         }       
     }
+
 }
