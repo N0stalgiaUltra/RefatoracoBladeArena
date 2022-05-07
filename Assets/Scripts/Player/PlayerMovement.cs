@@ -6,31 +6,51 @@ public class PlayerMovement : PlayerInput
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float velocidade;
-    [SerializeField] private Animator anim;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private ReconheceChao reconheceChao;
 
+    [SerializeField] private bool adagaHit;
     // Update is called once per frame
     void FixedUpdate()
     {
         Move();
         Jump(reconheceChao.chao);
-        ChangeDirection(InputMove());
         
-
+        if (adagaHit == true)
+        {
+            animator.SetTrigger("Hurt");
+            adagaHit = false;
+        }
     }
     
     private void Move()
     {
         rb.velocity = new Vector2(InputMove() * velocidade, rb.velocity.y);
+        animator.SetFloat("velocidadeAerea", rb.velocity.y);
+        
+        if (Mathf.Abs(InputMove())> Mathf.Epsilon)
+        {
+            animator.SetInteger("estadoAnim", 1);
+        }
+        else
+            animator.SetInteger("estadoAnim", 0);
+
+        ChangeDirection(InputMove());
     }
 
     private void Jump(bool chao)
     {
-        if(InputJump() && chao)
+        animator.SetBool("estaChao", chao);
+
+        if (InputJump() && chao)
         {
+            animator.SetTrigger("pulo");
             rb.velocity = new Vector2(rb.velocity.x, 7.5f);
+            chao = false;
+            animator.SetBool("estaChao", chao);
         }
+        
     }
     private void ChangeDirection(float input)
     {

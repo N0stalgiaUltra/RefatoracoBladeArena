@@ -2400,8 +2400,9 @@ MonoBehaviour:
   playerType: 0
   rb: {fileID: 981261595}
   velocidade: 4
-  anim: {fileID: 981261593}
+  animator: {fileID: 981261593}
   reconheceChao: {fileID: 1754736021}
+  adagaHit: 0
 --- !u!95 &981261593 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8757843599845629864, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
