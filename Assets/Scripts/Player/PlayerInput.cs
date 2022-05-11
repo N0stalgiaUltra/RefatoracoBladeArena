@@ -28,9 +28,9 @@ public abstract class PlayerInput : MonoBehaviour
     public bool InputJump()
     {
         if (this.playerType == PlayerType.PLAYER1)
-            return Input.GetButtonDown("Jmp");
+            return Input.GetButton("Jmp");
         else
-            return Input.GetButtonDown("Jmp2");
+            return Input.GetButton("Jmp2");
     }
 }
 

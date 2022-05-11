@@ -11,12 +11,15 @@ public class PlayerMovement : PlayerInput
     [SerializeField] private ReconheceChao reconheceChao;
 
     [SerializeField] private bool adagaHit;
+
+    private float jumpTimer = 1.5f;
     // Update is called once per frame
     void FixedUpdate()
     {
+        jumpTimer -= Time.fixedDeltaTime;
         Move();
+
         Jump(reconheceChao.chao);
-        
         if (adagaHit == true)
         {
             animator.SetTrigger("Hurt");
@@ -43,14 +46,17 @@ public class PlayerMovement : PlayerInput
     {
         animator.SetBool("estaChao", chao);
 
-        if (InputJump() && chao)
+        if(jumpTimer <= 0f)
         {
-            animator.SetTrigger("pulo");
-            rb.velocity = new Vector2(rb.velocity.x, 7.5f);
-            chao = false;
-            animator.SetBool("estaChao", chao);
+            if (InputJump() && chao)
+            {
+                animator.SetTrigger("pulo");
+                rb.velocity = new Vector2(rb.velocity.x, 7.5f);
+                chao = false;
+                animator.SetBool("estaChao", chao);
+                jumpTimer = 1.5f;
+            }
         }
-        
     }
     private void ChangeDirection(float input)
     {
