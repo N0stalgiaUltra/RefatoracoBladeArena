@@ -10,7 +10,10 @@ public class PlayerShoot : PlayerInput
     private bool input;
 
     [SerializeField] private float timer = 1.5f;
-
+    private void Start()
+    {
+        timer = 0f;
+    }
     private void Update()
     {
         timer -= Time.deltaTime;
@@ -29,7 +32,7 @@ public class PlayerShoot : PlayerInput
     {
         GameObject aux = Instantiate(dagger, spawnDagger.position, spawnDagger.rotation);
         //toca som
-        Destroy(aux, 3.5f);
+        Destroy(aux, 3.75f);
     }
 
 }

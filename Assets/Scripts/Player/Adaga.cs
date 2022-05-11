@@ -8,7 +8,7 @@ public class Adaga : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     public float veloAdaga;
     [SerializeField] GameObject player, Player2, limitesContainer;
-    private Transform direita, esquerda;
+    [SerializeField] private Transform direita, esquerda;
 
     void Awake()
     {
@@ -17,8 +17,8 @@ public class Adaga : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        direita = limitesContainer.transform.parent.GetChild(1);
-        esquerda = limitesContainer.transform.parent.GetChild(0);
+        direita = GameObject.FindGameObjectWithTag("LimiteDireita").GetComponent<Transform>();
+        esquerda = GameObject.FindGameObjectWithTag("LimiteEsquerda").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -83,6 +83,7 @@ public class Adaga : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        //Destroy(this.gameObject);
+       
+        Destroy(this.gameObject);
     }
 }

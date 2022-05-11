@@ -4380,6 +4380,10 @@ PrefabInstance:
       propertyPath: p2
       value: 
       objectReference: {fileID: 2053016342}
+    - target: {fileID: 5676352958739429464, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
+      propertyPath: adaga
+      value: 
+      objectReference: {fileID: 1365953838887177171, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
     - target: {fileID: 5676352958739429466, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
       propertyPath: m_Name
       value: LimitesContainer
