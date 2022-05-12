@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PlayerMovement : PlayerInput
 {
+    [Header("References")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float velocidade;
     [SerializeField] private Animator animator;
-
     [SerializeField] private ReconheceChao reconheceChao;
 
-    [SerializeField] private bool adagaHit;
+    [Header("Attributes")]
+    [SerializeField] private float velocity;
+    [SerializeField] private float jumpTimer = 1.5f;
 
-    private float jumpTimer = 1.5f;
+    private bool adagaHit;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -25,7 +26,7 @@ public class PlayerMovement : PlayerInput
     
     private void Move()
     {
-        rb.velocity = new Vector2(InputMove() * velocidade, rb.velocity.y);
+        rb.velocity = new Vector2(InputMove() * velocity, rb.velocity.y);
         animator.SetFloat("velocidadeAerea", rb.velocity.y);
         
         if (Mathf.Abs(InputMove())> Mathf.Epsilon)
@@ -56,11 +57,24 @@ public class PlayerMovement : PlayerInput
     }
     private void ChangeDirection(float input)
     {
-        if (input > 0)
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        else if (input < 0)
-            transform.eulerAngles = new Vector3(0, 180, 0);
+        if(this.playerType == PlayerType.PLAYER1)
+        {
+            if (input > 0)
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            else if (input < 0)
+                transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            if (input > 0)
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            else if (input < 0)
+                transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
-
+    void RunSoundEvent()
+    {
+        FindObjectOfType<AudioManager>().Play("Passos");
+    }
 
 }

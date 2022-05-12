@@ -43,7 +43,9 @@ GameObject:
   - component: {fileID: 5174760509454315591}
   - component: {fileID: 5174760509454315584}
   - component: {fileID: 5174760509454315594}
-  - component: {fileID: 7193660632578330140}
+  - component: {fileID: 2053016339}
+  - component: {fileID: 2053016340}
+  - component: {fileID: 2053016345}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -186,7 +188,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7193660632578330140
+--- !u!114 &2053016339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,12 +197,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 5174760509454315585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edfc3f618f6202f4599f90c6332be2fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 74045bfd4b4b8224687d37f6acbe59f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 5174760509454315594}
+--- !u!114 &2053016340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174760509454315585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 1
+  rb: {fileID: 5174760509454315591}
   velocidade: 4
   animator: {fileID: 5174760509454315594}
-  r_chao: 0
+  reconheceChao: {fileID: 1468743372}
+  adagaHit: 0
+--- !u!114 &2053016345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174760509454315585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8102c0d147b136541a82c4ad9d37b8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 1
+  dagger: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
+  spawnDagger: {fileID: 5174760510111546114}
+  timer: 1.5
 --- !u!1 &5174760509571669740
 GameObject:
   m_ObjectHideFlags: 0

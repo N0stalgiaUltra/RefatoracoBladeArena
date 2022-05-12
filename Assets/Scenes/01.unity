@@ -692,7 +692,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369169966}
-  - component: {fileID: 369169965}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -700,30 +699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &369169965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369169964}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c0c790dd2bf0a14a9f6eaaf2f1744f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 100
-  p1: {fileID: 981261590}
-  p2: {fileID: 2053016338}
-  adaga: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
-  goAdaga: {fileID: 0}
-  goAdaga2: {fileID: 0}
-  velo: 0
-  shotTimer: 1.5
-  shotTimer2: 1.5
-  adagaQtd: 0
-  adagaQtd2: 0
-  isGrounded: 0
 --- !u!4 &369169966
 Transform:
   m_ObjectHideFlags: 0
@@ -2385,67 +2360,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
   m_PrefabInstance: {fileID: 8757843599947121333}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &981261591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981261590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerType: 0
-  rb: {fileID: 981261595}
-  velocidade: 4
-  animator: {fileID: 981261593}
-  reconheceChao: {fileID: 1754736021}
-  adagaHit: 0
---- !u!95 &981261593 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8757843599845629864, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-  m_PrefabInstance: {fileID: 8757843599947121333}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &981261594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8757843599845629871, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
   m_PrefabInstance: {fileID: 8757843599947121333}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &981261595 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 8757843599845629869, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-  m_PrefabInstance: {fileID: 8757843599947121333}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &981261598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981261590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8102c0d147b136541a82c4ad9d37b8e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerType: 0
-  dagger: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
-  spawnDagger: {fileID: 227533785}
-  timer: 3
---- !u!114 &981261600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981261590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74045bfd4b4b8224687d37f6acbe59f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &992443768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,17 +3265,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1754736021 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 165310803, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-  m_PrefabInstance: {fileID: 8757843599947121333}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6571ecf40684e1b48905d8cb63c3a367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1772319621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,22 +3889,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5174760509454315589, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
   m_PrefabInstance: {fileID: 5174760510094113619}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2053016345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053016338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8102c0d147b136541a82c4ad9d37b8e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerType: 1
-  dagger: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
-  spawnDagger: {fileID: 1571942271}
-  timer: 1.5
 --- !u!1 &2133507368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,26 +4345,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 369169966}
     m_Modifications:
-    - target: {fileID: 7915466096146190948, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8593937079643784604, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-      propertyPath: p2
-      value: 
-      objectReference: {fileID: 2053016338}
-    - target: {fileID: 8593937079643784604, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-      propertyPath: goAdaga
-      value: 
-      objectReference: {fileID: 227533785}
-    - target: {fileID: 8593937079643784604, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757843599845629858, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: m_Name
       value: Player1

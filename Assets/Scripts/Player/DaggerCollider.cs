@@ -9,29 +9,29 @@ public class DaggerCollider : MonoBehaviour, ICollider
     {
         if(colliderTag.Equals("Plataforma") || colliderTag.Equals("Plataforma2"))
         {
-            print($"Adaga colidiu com {colliderTag}");   
+            //print($"Adaga colidiu com {colliderTag}");   
             //FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
         }
 
         if (colliderTag.Equals("Player1"))
         {
-            print("Adaga colidiu com Player 1");
+            //print("Adaga colidiu com Player 1");
             //FindObjectOfType<AudioManager>().Play("AlteraPlacar");
-            GameManager.Instance.placar2++;
+            //GameManager.Instance.placar2++;
 
         }
 
         if (colliderTag.Equals("Player2"))
         {
             //FindObjectOfType<AudioManager>().Play("AlteraPlacar");
-            GameManager.Instance.placar1++;
+            //GameManager.Instance.placar1++;
 
-            print("Adaga colidiu com Player2");
+            //print("Adaga colidiu com Player2");
         }
 
         if (colliderTag.Equals("Adaga"))
         {
-            print("Adaga colidiu com Adaga");
+            //print("Adaga colidiu com Adaga");
             //FindObjectOfType<AudioManager>().Play("ColisaoAdaga");
         }
 
