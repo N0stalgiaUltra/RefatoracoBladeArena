@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1365953838887177169}
   - component: {fileID: 1365953838887177174}
   - component: {fileID: 4572320775393593482}
+  - component: {fileID: 7959929506486877853}
   m_Layer: 0
   m_Name: Dagger
   m_TagString: Adaga
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365953838887177175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.585907, y: 3.425868, z: 0}
+  m_LocalPosition: {x: 9.017619, y: 3.425868, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.16957}
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,3 +150,17 @@ MonoBehaviour:
   player: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
   Player2: {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
   limitesContainer: {fileID: 5676352958739429466, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
+  direita: {fileID: 0}
+  esquerda: {fileID: 0}
+--- !u!114 &7959929506486877853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365953838887177175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8607fabbcf352fe4cb2fb71ffd70474a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

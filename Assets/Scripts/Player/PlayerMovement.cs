@@ -20,11 +20,7 @@ public class PlayerMovement : PlayerInput
         Move();
 
         Jump(reconheceChao.chao);
-        if (adagaHit == true)
-        {
-            animator.SetTrigger("Hurt");
-            adagaHit = false;
-        }
+        
     }
     
     private void Move()

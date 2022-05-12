@@ -2434,6 +2434,18 @@ MonoBehaviour:
   dagger: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
   spawnDagger: {fileID: 227533785}
   timer: 3
+--- !u!114 &981261600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981261590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74045bfd4b4b8224687d37f6acbe59f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &992443768
 GameObject:
   m_ObjectHideFlags: 0

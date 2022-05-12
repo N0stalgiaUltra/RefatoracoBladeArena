@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Adaga : MonoBehaviour
+public class Dagger : MonoBehaviour
 {
     
     [SerializeField] Rigidbody2D rb;
