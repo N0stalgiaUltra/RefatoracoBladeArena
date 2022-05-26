@@ -6,10 +6,21 @@ public class AudioManager : MonoBehaviour
 {   
     public Som[] sons;
 
+    public static AudioManager instance;
     void Awake()
     {
-        //DontDestroyOnLoad(gameObject);
-        foreach(Som s in sons)
+        #region Singleton
+        if (instance != null)
+        {
+            Destroy(instance);
+        }
+        else
+        {
+            instance = this;
+        }
+        #endregion
+
+        foreach (Som s in sons)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.som;
@@ -29,4 +40,31 @@ public class AudioManager : MonoBehaviour
         Som s = Array.Find(sons, som => som.nome == nome);
         s.source.Stop();
     }
+
+    #region SoundMethods
+
+    /// <summary>
+    /// Called to play the UI button click sound effect
+    /// </summary>
+    public void ClickButtonSound()
+    {
+        Play("ClicaBotao");
+
+    }
+
+    /// <summary>
+    /// Called when someone wins the match
+    /// </summary>
+    public void VictorySound()
+    {
+        Stop("MusicaFundo");
+        Play("MusicaVitoria");
+    }
+
+    public void RunSound() { }
+    public void ScoreSound() { }
+    public void DaggerHitSound() { }
+    
+    
+    #endregion
 }

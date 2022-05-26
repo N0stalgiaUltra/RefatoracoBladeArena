@@ -1,7 +1,8 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
+using System;
 
-[System.Serializable]
+[Serializable]
 public class Som
 {
     public string nome;

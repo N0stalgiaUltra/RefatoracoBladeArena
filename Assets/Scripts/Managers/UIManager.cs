@@ -27,33 +27,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //int qtdAdagas1 = p1.GetComponent<PlayerManager>().adagaQtd;
-        //estaPausado = pauseMenu.pausado;
-        //if(qtdAdagas1 != 0f)
-        //{
-        //    adagasText.text = $"Adagas: {qtdAdagas1}";
-        //}
-        //else
-        //{
-        //    adagasText.text = "Recarregando";
-        //}
-        ////p1Hp.text = $" HP: {p1.GetComponent<PlayerManager>().hp}";
-        
-
-        ////p2Hp.text = $" HP: {p2.GetComponent<PlayerManager>().hp}";
-        //adagasText2.text = $"Adagas: {p2.GetComponent<PlayerManager>().adagaQtd2}";
-
-        placar1.text = $"{GameManager.Instance.placar1}";
-        placar2.text = $"{GameManager.Instance.placar2}";
-        
-        if(GameManager.Instance.placar1 >= 10)
-        {   
-            VitoriaP1();
-        }
-        else if(GameManager.Instance.placar2 >= 10)
-        {
-            VitoriaP2();
-        }
      
         //posicao da qtd de adagas do p1
         Vector3 txtPos = Camera.main.WorldToScreenPoint(adagasp1.transform.position);
@@ -67,17 +40,17 @@ public class UIManager : MonoBehaviour
     {
         menuPause.SetActive(false);
         menuConfig.SetActive(true);
-        FindObjectOfType<AudioManager>().Play("ClicaBotao");
+        AudioManager.instance.ClickButtonSound();
     }
     public void VoltaMenu()
     {
-        FindObjectOfType<AudioManager>().Play("ClicaBotao");
+        AudioManager.instance.ClickButtonSound();
         SceneManager.LoadScene("menu");
 
     }
     public void Continuar()
     {
-        FindObjectOfType<AudioManager>().Play("ClicaBotao");
+        AudioManager.instance.ClickButtonSound();
         menuPause.SetActive(false);
         Time.timeScale = 1;
         estaPausado = false;
@@ -85,13 +58,13 @@ public class UIManager : MonoBehaviour
     }
     public void VoltaPauseMenu()
     {
-        FindObjectOfType<AudioManager>().Play("ClicaBotao");
+        AudioManager.instance.ClickButtonSound();
         menuPause.SetActive(true);
         menuConfig.SetActive(false);
     }
     public void ReiniciarPartida()
     {
-        FindObjectOfType<AudioManager>().Play("ClicaBotao");
+        AudioManager.instance.ClickButtonSound();
         SceneManager.LoadScene("01");
     }
     public void VitoriaP1()
