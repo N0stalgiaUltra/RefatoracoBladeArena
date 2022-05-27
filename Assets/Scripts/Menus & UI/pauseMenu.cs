@@ -1,23 +1,78 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool pausado = false;
+    private bool estaPausado;
+    [SerializeField] private GameObject menuConfig;
 
+    [Header("Buttons Reference")]
+    [SerializeField] private Button continueButton, configButton;
+    [SerializeField] private Button returnConfigButton, returnMenuButton;
 
-    public bool Pausar()
+    
+    private void Start()
     {
-        if(Time.timeScale == 0)
+        continueButton.onClick.AddListener(() => ContinueGame());
+        configButton.onClick.AddListener(() => ConfigMenu(false));
+        returnConfigButton.onClick.AddListener(() => ConfigMenu(true));
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("escape"))
         {
-            Time.timeScale = 1;
-            return false;
+            OpenPause();
+        }
+    }
+
+    /// <summary>
+    /// Controls the Pause Menu
+    /// </summary>
+    private void OpenPause()
+    {
+        if (!estaPausado)
+        {
+            AudioManager.instance.OpenUISound();
+            gameObject.SetActive(true);
+            estaPausado = true;
+            Time.timeScale = 0;
         }
         else
         {
-            Time.timeScale = 0;
-            return true;
+            ContinueGame();
         }
     }
+
+    private void ContinueGame()
+    {
+        if (estaPausado)
+        {
+            Time.timeScale = 1;
+            gameObject.SetActive(false);
+            estaPausado = false;
+        }
+        else return;
+    }
+    
+    private void ConfigMenu(bool open)
+    {
+        if (!open)
+        {
+            gameObject.SetActive(!open);
+            menuConfig.SetActive(open);
+            AudioManager.instance.ClickButtonSound();
+        }
+        else
+        {
+            gameObject.SetActive(open);
+            menuConfig.SetActive(!open);
+            AudioManager.instance.ClickButtonSound();
+        }
+    }
+
+
 }
+

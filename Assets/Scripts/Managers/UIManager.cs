@@ -36,12 +36,7 @@ public class UIManager : MonoBehaviour
         adagasText2.transform.position = txtPos2;
         
     }
-    public void Config()
-    {
-        menuPause.SetActive(false);
-        menuConfig.SetActive(true);
-        AudioManager.instance.ClickButtonSound();
-    }
+
     public void VoltaMenu()
     {
         AudioManager.instance.ClickButtonSound();
@@ -56,12 +51,7 @@ public class UIManager : MonoBehaviour
         estaPausado = false;
          
     }
-    public void VoltaPauseMenu()
-    {
-        AudioManager.instance.ClickButtonSound();
-        menuPause.SetActive(true);
-        menuConfig.SetActive(false);
-    }
+
     public void ReiniciarPartida()
     {
         AudioManager.instance.ClickButtonSound();

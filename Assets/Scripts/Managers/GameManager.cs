@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     public int score1, score2;
     
     public GameObject PauseMenu;
-    public bool estaPausado;
 
 
     [Header("End Game Attributes")]
@@ -52,32 +51,9 @@ public class GameManager : MonoBehaviour
             GameVictory(2);
         }
 
-        if (Input.GetKeyDown("escape"))
-        {
-            OpenPause();
-        }
     }
 
-    /// <summary>
-    /// Controls the Pause Menu
-    /// </summary>
-    private void OpenPause()
-    {
-        if (!estaPausado)
-        {
-            AudioManager.instance.OpenUISound();
-            PauseMenu.SetActive(true);
-            estaPausado = true;
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-            PauseMenu.SetActive(false);
-            estaPausado = false;
-        }
-        
-    }
+    
 
     /// <summary>
     /// Called whenever a match starts
@@ -87,7 +63,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         score1 = score2 = 0;
         AudioManager.instance.BackgroundSound();
-        estaPausado = false;
     }
 
     /// <summary>
@@ -96,8 +71,6 @@ public class GameManager : MonoBehaviour
     public void GameEnd() 
     {
         Time.timeScale = score1 = score2 = 0;
-        
-        
     }
 
     /// <summary>
