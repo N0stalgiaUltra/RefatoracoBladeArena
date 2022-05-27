@@ -61,6 +61,14 @@ public class AudioManager : MonoBehaviour
         Play("MusicaVitoria");
     }
 
+    public void BackgroundSound() {
+        Play("MusicaFundo");
+    }
+    public void OpenUISound() {
+
+        Stop("MusicaFundo");
+        Play("AbreMenu");
+    }
     public void RunSound() { }
     public void ScoreSound() { }
     public void DaggerHitSound() { }

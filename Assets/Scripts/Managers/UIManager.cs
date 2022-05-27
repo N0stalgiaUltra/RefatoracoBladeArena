@@ -67,23 +67,5 @@ public class UIManager : MonoBehaviour
         AudioManager.instance.ClickButtonSound();
         SceneManager.LoadScene("01");
     }
-    public void VitoriaP1()
-    {
-         FindObjectOfType<AudioManager>().Stop("MusicaFundo");
-         FindObjectOfType<AudioManager>().Play("MusicaVitoria");
-         Time.timeScale = 0;
-         Vitoria.text = "Player 1 Wins!";
-         telaVitoria.SetActive(true);
-         GameManager.Instance.placar1 = 0;
-    }
 
-    public void VitoriaP2()
-    {
-         FindObjectOfType<AudioManager>().Stop("MusicaFundo");
-         FindObjectOfType<AudioManager>().Play("MusicaVitoria");
-         Time.timeScale = 0;
-         Vitoria.text = "Player 2 Wins!";
-         telaVitoria.SetActive(true);
-         GameManager.Instance.placar2 = 0;
-    }
 }

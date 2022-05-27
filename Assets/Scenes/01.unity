@@ -2426,9 +2426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc58b52acf4b2f49a7c38910c2ed906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placar1: 0
-  placar2: 0
-  pressBtn: 0
+  score1: 0
+  score2: 0
   PauseMenu: {fileID: 570544913}
   estaPausado: 0
   victoryScreen: {fileID: 228394984}
@@ -2795,9 +2794,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: VoltaMenu
+      - m_Target: {fileID: 1115228181}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GameEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

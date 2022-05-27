@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-    
-    public int placar1, placar2, pressBtn;
+
+    public int score1, score2;
     
     public GameObject PauseMenu;
     public bool estaPausado;
@@ -37,57 +37,81 @@ public class GameManager : MonoBehaviour
     {
         //1256x942
         //Screen.SetResolution(1024, 768, false);
-        placar1 = 0;
-        placar2 = 0;
-        pressBtn = 0;
-        Time.timeScale = 1;
-        FindObjectOfType<AudioManager>().Play("MusicaFundo");
-        estaPausado = pauseMenu.pausado;
+        GameStart();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if(placar1 == 10 || placar2 == 10)
-
-        if (placar1 >= 2)
+        if (score1 >= 2)
         {
             GameVictory(1);
         }
-        else if (placar2 >= 10)
+        else if (score2 >= 10)
         {
             GameVictory(2);
         }
 
         if (Input.GetKeyDown("escape"))
         {
-            estaPausado = true;
-            FindObjectOfType<AudioManager>().Play("AbreMenu");
-            //FindObjectOfType<AudioManager>().Stop("MusicaFundo");
-            PauseMenu.SetActive(true);
-            //estaPausado = GetComponent<pauseMenu>().Pausar();   
-            Time.timeScale = 0;
+            OpenPause();
         }
     }
 
-    private void GameStart() { }
-    private void GameEnd() 
+    /// <summary>
+    /// Controls the Pause Menu
+    /// </summary>
+    private void OpenPause()
     {
+        if (!estaPausado)
+        {
+            AudioManager.instance.OpenUISound();
+            PauseMenu.SetActive(true);
+            estaPausado = true;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            PauseMenu.SetActive(false);
+            estaPausado = false;
+        }
         
-        Time.timeScale = 0;
-        
-        placar1 = 0;
-        placar2 = 0;
     }
 
+    /// <summary>
+    /// Called whenever a match starts
+    /// </summary>
+    private void GameStart() 
+    {
+        Time.timeScale = 1;
+        score1 = score2 = 0;
+        AudioManager.instance.BackgroundSound();
+        estaPausado = false;
+    }
+
+    /// <summary>
+    /// Called whenever a game ends
+    /// </summary>
+    public void GameEnd() 
+    {
+        Time.timeScale = score1 = score2 = 0;
+        
+        
+    }
+
+    /// <summary>
+    /// Called whenever a player wins the match
+    /// </summary>
+    /// <param name="player">Type of player (ex: 1 stands for player 1)</param>
     public void GameVictory(int player)
     {
         victoryScreen.SetActive(true);
-        screenText.text = player == 1 ? "Player One Wins" : "Player 2 Wins";
-
+        screenText.text = player == 1 ? "Player One Wins" : "Player Two Wins";
 
         AudioManager.instance.VictorySound();
 
         GameEnd();
     }
+    
 }
