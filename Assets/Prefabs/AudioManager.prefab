@@ -58,7 +58,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - nome: MusicaFundo
     som: {fileID: 8300000, guid: 1ac8271e27c2fef4fb7643f5bb33e6ba, type: 3}
-    volume: 0
+    volume: 0.98
     pitch: 0
     loop: 1
     source: {fileID: 0}

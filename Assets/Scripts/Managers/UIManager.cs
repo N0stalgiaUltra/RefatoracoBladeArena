@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         telaVitoria.SetActive(false);
-        FindObjectOfType<AudioManager>().Stop("MusicaVitoria");
+        //FindObjectOfType<AudioManager>().Stop("MusicaVitoria");
     }
 
     // Update is called once per frame
@@ -37,12 +37,7 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public void VoltaMenu()
-    {
-        AudioManager.instance.ClickButtonSound();
-        SceneManager.LoadScene("menu");
 
-    }
     public void Continuar()
     {
         AudioManager.instance.ClickButtonSound();

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
@@ -18,6 +19,7 @@ public class PauseMenu : MonoBehaviour
         continueButton.onClick.AddListener(() => ContinueGame());
         configButton.onClick.AddListener(() => ConfigMenu(false));
         returnConfigButton.onClick.AddListener(() => ConfigMenu(true));
+        returnMenuButton.onClick.AddListener(() => ReturnToMenu());
     }
 
     private void Update()
@@ -73,6 +75,11 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    private void ReturnToMenu()
+    {
+        AudioManager.instance.ClickButtonSound();
+        SceneManager.LoadScene("Menu");
+    }
 
 }
 
