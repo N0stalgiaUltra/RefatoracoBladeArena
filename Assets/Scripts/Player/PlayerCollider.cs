@@ -14,7 +14,7 @@ public class PlayerCollider : MonoBehaviour, ICollider
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Adaga")
+        if (other.gameObject.CompareTag("Adaga"))
             GetHit();
     }
 }

@@ -15,18 +15,16 @@ public class DaggerCollider : MonoBehaviour, ICollider
 
         if (colliderTag.Equals("Player1"))
         {
-            //print("Adaga colidiu com Player 1");
             //FindObjectOfType<AudioManager>().Play("AlteraPlacar");
-            GameManager.Instance.score2++;
-
+            //GameManager.Instance.score2++;
+            ScoreManager.instance.P2Score++;
         }
 
         if (colliderTag.Equals("Player2"))
         {
             //FindObjectOfType<AudioManager>().Play("AlteraPlacar");
-            GameManager.Instance.score1++;
-
-            //print("Adaga colidiu com Player2");
+            //GameManager.Instance.score1++;
+            ScoreManager.instance.P1Score++;
         }
 
         if (colliderTag.Equals("Adaga"))

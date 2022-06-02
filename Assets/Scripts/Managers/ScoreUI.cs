@@ -5,7 +5,6 @@ using TMPro;
 
 public class ScoreUI : ScoreManager
 {
-    [SerializeField] private TextMeshProUGUI p1ScoreText, p2ScoreText;
     // Start is called before the first frame update
     void Start()
     {

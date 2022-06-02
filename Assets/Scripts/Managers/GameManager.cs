@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour
 
 
     [Header("End Game Attributes")]
-    [SerializeField] private GameObject victoryScreen;
-    [SerializeField] private TextMeshProUGUI screenText;
+    [SerializeField] protected GameObject victoryScreen;
+    [SerializeField] protected TextMeshProUGUI screenText;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,14 +42,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score1 >= 2)
-        {
-            GameVictory(1);
-        }
-        else if (score2 >= 10)
-        {
-            GameVictory(2);
-        }
+        //if (score1 >= 2)
+        //{
+        //    GameVictory(1);
+        //}
+        //else if (score2 >= 10)
+        //{
+        //    GameVictory(2);
+        //}
 
     }
 
@@ -61,16 +61,15 @@ public class GameManager : MonoBehaviour
     private void GameStart() 
     {
         Time.timeScale = 1;
-        score1 = score2 = 0;
         AudioManager.instance.BackgroundSound();
     }
 
     /// <summary>
     /// Called whenever a game ends
     /// </summary>
-    public void GameEnd() 
+    public virtual void GameEnd() 
     {
-        Time.timeScale = score1 = score2 = 0;
+        Time.timeScale = 0;
     }
 
     /// <summary>
