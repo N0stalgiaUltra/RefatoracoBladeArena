@@ -34,7 +34,6 @@ public class AudioManager : MonoBehaviour
     {
         Som s = Array.Find(sons, som => som.nome == nome);
         s.source.Play();
-        print($"nome: {s.nome}, som: {s.som}, volume: {s.volume}");
     }
     public void Stop(string nome)
     {

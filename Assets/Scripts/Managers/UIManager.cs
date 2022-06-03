@@ -33,19 +33,6 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void Continuar()
-    {
-        AudioManager.instance.ClickButtonSound();
-        menuPause.SetActive(false);
-        Time.timeScale = 1;
-        estaPausado = false;
-         
-    }
-
-    public void ReiniciarPartida()
-    {
-        AudioManager.instance.ClickButtonSound();
-        SceneManager.LoadScene("01");
-    }
+    
 
 }

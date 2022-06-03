@@ -23,37 +23,15 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public int score1, score2;
-    
-    public GameObject PauseMenu;
-
-
     [Header("End Game Attributes")]
-    [SerializeField] protected GameObject victoryScreen;
+    //[SerializeField] protected GameObject victoryScreen;
     [SerializeField] protected TextMeshProUGUI screenText;
+    [SerializeField] private VictoryScreen victoryScreen;
     // Start is called before the first frame update
     void Start()
     {
-        //1256x942
-        //Screen.SetResolution(1024, 768, false);
         GameStart();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if (score1 >= 2)
-        //{
-        //    GameVictory(1);
-        //}
-        //else if (score2 >= 10)
-        //{
-        //    GameVictory(2);
-        //}
-
-    }
-
-    
 
     /// <summary>
     /// Called whenever a match starts
@@ -78,7 +56,7 @@ public class GameManager : MonoBehaviour
     /// <param name="player">Type of player (ex: 1 stands for player 1)</param>
     public void GameVictory(int player)
     {
-        victoryScreen.SetActive(true);
+        victoryScreen.Setup();
         screenText.text = player == 1 ? "Player One Wins" : "Player Two Wins";
 
         AudioManager.instance.VictorySound();

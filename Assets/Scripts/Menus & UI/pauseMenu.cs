@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     private bool estaPausado;
-    [SerializeField] private GameObject menuConfig;
+    [SerializeField] private GameObject menuConfig, pauseMenu;
 
     [Header("Buttons Reference")]
     [SerializeField] private Button continueButton, configButton;
@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
 
     
     private void Start()
-    {
+    { 
         continueButton.onClick.AddListener(() => ContinueGame());
         configButton.onClick.AddListener(() => ConfigMenu(false));
         returnConfigButton.onClick.AddListener(() => ConfigMenu(true));
@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         if (!estaPausado)
         {
             AudioManager.instance.OpenUISound();
-            gameObject.SetActive(true);
+            pauseMenu.SetActive(true);
             estaPausado = true;
             Time.timeScale = 0;
         }
@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
         if (estaPausado)
         {
             Time.timeScale = 1;
-            gameObject.SetActive(false);
+            pauseMenu.SetActive(false);
             estaPausado = false;
         }
         else return;
@@ -63,13 +63,13 @@ public class PauseMenu : MonoBehaviour
     {
         if (!open)
         {
-            gameObject.SetActive(!open);
+            pauseMenu.SetActive(!open);
             menuConfig.SetActive(open);
             AudioManager.instance.ClickButtonSound();
         }
         else
         {
-            gameObject.SetActive(open);
+            pauseMenu.SetActive(open);
             menuConfig.SetActive(!open);
             AudioManager.instance.ClickButtonSound();
         }
