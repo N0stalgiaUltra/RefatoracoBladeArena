@@ -33,8 +33,18 @@ public class ScoreManager : MonoBehaviour
 
         if(p1Score >= scoreToBeat)
         {
-            GameManager.Instance.GameVictory(1);
+            End(1);
         }
+        else if(p2Score >= scoreToBeat)
+        {
+            End(2);
+        }
+    }
+
+    private void End(int player)
+    {
+        GameManager.Instance.GameVictory(player);
+        p1Score = p2Score = 0;
     }
 
     public int P1Score { get => this.p1Score; set => p1Score = value; }

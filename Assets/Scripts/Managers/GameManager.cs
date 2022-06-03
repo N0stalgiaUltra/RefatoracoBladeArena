@@ -55,10 +55,10 @@ public class GameManager : MonoBehaviour
     /// <param name="player">Type of player (ex: 1 stands for player 1)</param>
     public void GameVictory(int player)
     {
+        AudioManager.instance.VictorySound();
+        
         victoryScreen.Setup();
         screenText.text = player == 1 ? "Player One Wins" : "Player Two Wins";
-
-        AudioManager.instance.VictorySound();
 
         GameEnd();
     }

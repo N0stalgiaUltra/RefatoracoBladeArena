@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6423ae5ff500434da0765d12b410c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.15
+  amplitude: -1.5
   frequency: 0.7
   diffPosicao: {x: 0, y: 0}
   tempPos: {x: 0, y: 0}
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6423ae5ff500434da0765d12b410c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.15
+  amplitude: 1.5
   frequency: 0.7
   diffPosicao: {x: 0, y: 0}
   tempPos: {x: 0, y: 0}
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   p2Score: 0
   p1ScoreText: {fileID: 478689843}
   p2ScoreText: {fileID: 1875490898}
-  scoreToBeat: 50
+  scoreToBeat: 1
 --- !u!1 &1250025143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,6 +4320,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6070203278033170379, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
+      propertyPath: sons.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070203278033170379, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
       propertyPath: sons.Array.data[4].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -4350,6 +4354,10 @@ PrefabInstance:
     - target: {fileID: 6070203278033170379, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
       propertyPath: sons.Array.data[2].volume
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070203278033170379, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
+      propertyPath: sons.Array.data[3].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6070203278033170379, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
       propertyPath: sons.Array.data[4].volume
