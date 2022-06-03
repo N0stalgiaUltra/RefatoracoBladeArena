@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [Header("End Game Attributes")]
-    //[SerializeField] protected GameObject victoryScreen;
     [SerializeField] protected TextMeshProUGUI screenText;
     [SerializeField] private VictoryScreen victoryScreen;
     // Start is called before the first frame update

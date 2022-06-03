@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class VictoryScreen : MonoBehaviour
 {
     [SerializeField] private Button restartMatch, backToMenu;
+    
 
     public void Setup()
     {
+        transform.GetChild(0).gameObject.SetActive(true);
         restartMatch.onClick.AddListener(() => Load(true));
         backToMenu.onClick.AddListener(() => Load(false));
     }
@@ -22,6 +24,8 @@ public class VictoryScreen : MonoBehaviour
             SceneManager.LoadScene("Game");
         else
             SceneManager.LoadScene("Menu");
-    
+
+        transform.GetChild(0).gameObject.SetActive(false);
+
     }
 }
