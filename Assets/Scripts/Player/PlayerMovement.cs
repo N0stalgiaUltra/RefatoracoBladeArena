@@ -74,7 +74,7 @@ public class PlayerMovement : PlayerInput
     }
     void RunSoundEvent()
     {
-        FindObjectOfType<AudioManager>().Play("Passos");
+        AudioManager.instance.RunSound();    
     }
 
 }

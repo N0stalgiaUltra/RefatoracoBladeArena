@@ -8,30 +8,22 @@ public class DaggerCollider : MonoBehaviour, ICollider
     public void GetHit()
     {
         if(colliderTag.Equals("Plataforma") || colliderTag.Equals("Plataforma2"))
-        {
-            //print($"Adaga colidiu com {colliderTag}");   
-            //FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
-        }
+            AudioManager.instance.PlatformHitSound();
 
         if (colliderTag.Equals("Player1"))
         {
-            //FindObjectOfType<AudioManager>().Play("AlteraPlacar");
-            //GameManager.Instance.score2++;
+            AudioManager.instance.ScoreSound();
             ScoreManager.instance.P2Score++;
         }
 
         if (colliderTag.Equals("Player2"))
         {
-            //FindObjectOfType<AudioManager>().Play("AlteraPlacar");
-            //GameManager.Instance.score1++;
+            AudioManager.instance.ScoreSound();
             ScoreManager.instance.P1Score++;
         }
 
         if (colliderTag.Equals("Adaga"))
-        {
-            //print("Adaga colidiu com Adaga");
-            //FindObjectOfType<AudioManager>().Play("ColisaoAdaga");
-        }
+            AudioManager.instance.DaggerHitSound();
 
         Destroy(gameObject);
     }

@@ -70,16 +70,16 @@ public class Dagger : MonoBehaviour
         //    FindObjectOfType<AudioManager>().Play("ColisaoAdaga");
         //}
         
-        if(other.gameObject.CompareTag("Plataforma"))
-        {
-            Destroy(gameObject);
-            FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
-        }
-        if(other.gameObject.CompareTag("Plataforma2"))
-        {
-           Destroy(gameObject);
-           FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
-        }
+        //if(other.gameObject.CompareTag("Plataforma"))
+        //{
+        //    Destroy(gameObject);
+        //    FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
+        //}
+        //if(other.gameObject.CompareTag("Plataforma2"))
+        //{
+        //   Destroy(gameObject);
+        //   FindObjectOfType<AudioManager>().Play("ColisaoPlataforma");
+        //}
     }
     private void OnBecameInvisible()
     {

@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
-
+    
     public void Play(string nome)
     {
         Som s = Array.Find(sons, som => som.nome == nome);
@@ -41,16 +41,10 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+
     #region SoundMethods
 
-    /// <summary>
-    /// Called to play the UI button click sound effect
-    /// </summary>
-    public void ClickButtonSound()
-    {
-        Play("ClicaBotao");
-
-    }
+    public void MenuSound() { Play("MusicaMenu"); }
 
     /// <summary>
     /// Called when someone wins the match
@@ -61,17 +55,32 @@ public class AudioManager : MonoBehaviour
         Play("MusicaVitoria");
     }
 
-    public void BackgroundSound() {
+    public void BackgroundSound()
+    {
         Play("MusicaFundo");
     }
-    public void OpenUISound() {
+    public void OpenUISound()
+    {
 
         Stop("MusicaFundo");
         Play("AbreMenu");
     }
-    public void RunSound() { }
-    public void ScoreSound() { }
-    public void DaggerHitSound() { }
+
+    /// <summary>
+    /// Called to play the UI button click sound effect
+    /// </summary>
+    public void ClickButtonSound()
+    {
+        Play("ClicaBotao");
+
+    }
+    public void DaggerHitSound() { Play("ColisaoAdaga"); }
+
+    public void PlatformHitSound() { Play("ColisaoPlataforma"); }
+
+    public void ScoreSound() { Play("AlteraPlacar"); }
+    public void RunSound() { Play("Passos"); }
+   
     
     
     #endregion

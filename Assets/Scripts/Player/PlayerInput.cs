@@ -20,9 +20,9 @@ public abstract class PlayerInput : MonoBehaviour
     public float InputMove()
     {
         if (this.playerType == PlayerType.PLAYER1)
-            return Input.GetAxisRaw("Horizontal");
+            return Input.GetAxis("Horizontal");
         else
-            return Input.GetAxisRaw("Horizontal2");
+            return Input.GetAxis("Horizontal2");
     }
     
     public bool InputJump()
