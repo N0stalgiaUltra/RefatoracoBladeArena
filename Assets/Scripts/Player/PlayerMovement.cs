@@ -12,6 +12,7 @@ public class PlayerMovement : PlayerInput
     [Header("Attributes")]
     [SerializeField] private float velocity;
     [SerializeField] private float jumpTimer = 1.5f;
+    [SerializeField] private float jumpFactor;
 
     private bool adagaHit;
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class PlayerMovement : PlayerInput
     
     private void Move()
     {
+        print(InputMove().ToString());
         rb.velocity = new Vector2(InputMove() * velocity, rb.velocity.y);
         animator.SetFloat("velocidadeAerea", rb.velocity.y);
         
@@ -48,7 +50,7 @@ public class PlayerMovement : PlayerInput
             if (InputJump() && chao)
             {
                 animator.SetTrigger("pulo");
-                rb.velocity = new Vector2(rb.velocity.x, 7.5f);
+                rb.velocity = new Vector2(rb.velocity.x, jumpFactor);
                 chao = false;
                 animator.SetBool("estaChao", chao);
                 jumpTimer = 1.5f;

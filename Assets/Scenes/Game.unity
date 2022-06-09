@@ -4392,6 +4392,10 @@ PrefabInstance:
       propertyPath: velocity
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2053016340, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
+      propertyPath: jumpFactor
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
       propertyPath: m_Name
       value: Player2
@@ -4521,6 +4525,10 @@ PrefabInstance:
     - target: {fileID: 802344129530977131, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: velocity
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 802344129530977131, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: jumpFactor
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: m_Name
