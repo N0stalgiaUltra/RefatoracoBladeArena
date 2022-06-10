@@ -62,5 +62,9 @@ public class GameManager : MonoBehaviour
 
         GameEnd();
     }
+
+    public void QuitGame()
+    {
+    }
     
 }
