@@ -14,7 +14,6 @@ public class PlayerMovement : PlayerInput
     [SerializeField] private float jumpTimer = 1.5f;
     [SerializeField] private float jumpFactor;
 
-    private bool adagaHit;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -27,7 +26,6 @@ public class PlayerMovement : PlayerInput
     
     private void Move()
     {
-        print(InputMove().ToString());
         rb.velocity = new Vector2(InputMove() * velocity, rb.velocity.y);
         animator.SetFloat("velocidadeAerea", rb.velocity.y);
         
