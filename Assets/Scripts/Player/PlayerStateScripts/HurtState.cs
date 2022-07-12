@@ -6,17 +6,14 @@ public class HurtState : BaseState
 {
     public override void EnterState(PlayerStateManager manager)
     {
-        Debug.Log("Hurt");
+        manager.animator.SetTrigger("Hurt");
     }
 
-    public override void OnCollisionEnter(PlayerStateManager manager)
-    {
-        manager.playerCollider.GetHit();
-    }
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        throw new System.NotImplementedException();
+        if (manager.animator.GetCurrentAnimatorStateInfo(0).IsName("P1_hurt"))
+            manager.SwitchState(manager.idleState);
     }
 
 }

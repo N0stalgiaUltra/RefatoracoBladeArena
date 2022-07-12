@@ -9,11 +9,6 @@ public class JumpState : BaseState
         throw new System.NotImplementedException();
     }
 
-    public override void OnCollisionEnter(PlayerStateManager manager)
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override void UpdateState(PlayerStateManager manager)
     {
         throw new System.NotImplementedException();

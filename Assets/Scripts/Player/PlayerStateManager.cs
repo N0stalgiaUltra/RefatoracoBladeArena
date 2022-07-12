@@ -14,9 +14,8 @@ public class PlayerStateManager : MonoBehaviour
     public RunState runState = new RunState();
     public JumpState jumpState = new JumpState();
 
-
-    public PlayerInput playerMov;
-    public PlayerCollider playerCollider;
+    public PlayerInput playerInput;
+    public Animator animator;
     void Start()
     {
         currentState = idleState;
@@ -34,4 +33,6 @@ public class PlayerStateManager : MonoBehaviour
         currentState = state;
         state.EnterState(this);
     }
+
+    public BaseState CurrentState { get => this.currentState; }
 }
