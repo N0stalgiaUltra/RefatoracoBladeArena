@@ -6,25 +6,32 @@ public class RunState : BaseState
 {
     Rigidbody2D rb;
     Animator animator;
+    Transform playerTransform;
+
+    public RunState(Rigidbody2D rb, Animator animator, Transform playerTransform)
+    {
+        this.rb = rb;
+        this.animator = animator;
+        this.playerTransform = playerTransform;
+    }
+
     public override void EnterState(PlayerStateManager manager)
     {
-        rb = manager.GetComponent<Rigidbody2D>();
-        animator = manager.animator;
         Debug.Log("RunState");
     }
 
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        Move(manager.playerInput, manager);
+        Move(manager);
     }
 
-    private void Move(PlayerInput input, PlayerStateManager manager)
+    private void Move(PlayerStateManager manager)
     {
-        rb.velocity = new Vector2(input.InputMove() * 4, rb.velocity.y); 
+        rb.velocity = new Vector2(manager.InputMove() * 4, rb.velocity.y); 
         //animator.SetFloat("velocidadeAerea", rb.velocity.y); 
 
-        if (Mathf.Abs(input.InputMove()) > Mathf.Epsilon)
+        if (Mathf.Abs(manager.InputMove()) > Mathf.Epsilon)
         {
             animator.SetInteger("estadoAnim", 1);
         }
@@ -34,25 +41,25 @@ public class RunState : BaseState
             manager.SwitchState(manager.idleState);
         }
 
-        //ChangeDirection(InputMove());
+        ChangeDirection(manager);
     }
 
-    //private void ChangeDirection(float input)
-    //{
+    private void ChangeDirection(PlayerStateManager manager)
+    {
 
-    //    if (this.playerType == PlayerType.PLAYER1)
-    //    {
-    //        if (input > 0)
-    //            transform.eulerAngles = new Vector3(0, 0, 0);
-    //        else if (input < 0)
-    //            transform.eulerAngles = new Vector3(0, 180, 0);
-    //    }
-    //    else
-    //    {
-    //        if (input > 0)
-    //            transform.eulerAngles = new Vector3(0, 180, 0);
-    //        else if (input < 0)
-    //            transform.eulerAngles = new Vector3(0, 0, 0);
-    //    }
-    //}
+        if (manager.playerType == PlayerInput.PlayerType.PLAYER1)
+        {
+            if (manager.InputMove() > 0)
+                playerTransform.eulerAngles = new Vector3(0, 0, 0);
+            else if (manager.InputMove() < 0)
+                playerTransform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            if (manager.InputMove() > 0)
+                playerTransform.eulerAngles = new Vector3(0, 180, 0);
+            else if (manager.InputMove() < 0)
+                playerTransform.eulerAngles = new Vector3(0, 0, 0);
+        }
+    }
 }

@@ -13,7 +13,7 @@ public class IdleState : BaseState
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        if (!manager.playerInput.InputMove().Equals(0))
+        if (!manager.InputMove().Equals(0))
             manager.SwitchState(manager.runState);
     }
 }

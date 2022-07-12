@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Context
-public class PlayerStateManager : MonoBehaviour
+public class PlayerStateManager : PlayerInput
 {
+    public Transform playerTransform;
+    public Rigidbody2D rb;
+    public Animator animator;
+    public PlayerData playerData;
+
     //abstract state
     BaseState currentState;
 
     //concrete state(s)
     public HurtState hurtState = new HurtState();
     public IdleState idleState = new IdleState();
-    public RunState runState = new RunState();
+    public RunState runState;
     public JumpState jumpState = new JumpState();
 
-    public PlayerInput playerInput;
-    public Animator animator;
+
+    private void Awake()
+    {
+        runState = new RunState(rb, animator, playerTransform);
+    }
     void Start()
     {
         currentState = idleState;
@@ -34,5 +42,4 @@ public class PlayerStateManager : MonoBehaviour
         state.EnterState(this);
     }
 
-    public BaseState CurrentState { get => this.currentState; }
 }

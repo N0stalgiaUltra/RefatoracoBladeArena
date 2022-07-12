@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class HurtState : BaseState
 {
+    Animator animator;
     public override void EnterState(PlayerStateManager manager)
     {
-        manager.animator.SetTrigger("Hurt");
+        animator = manager.GetComponent<Animator>();
+        animator.SetTrigger("Hurt");
     }
 
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        if (manager.animator.GetCurrentAnimatorStateInfo(0).IsName("P1_hurt"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("P1_hurt"))
             manager.SwitchState(manager.idleState);
     }
 
