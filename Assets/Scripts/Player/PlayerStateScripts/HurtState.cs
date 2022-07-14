@@ -5,10 +5,18 @@ using UnityEngine;
 public class HurtState : BaseState
 {
     Animator animator;
+    Rigidbody2D playerRB;
+
+    public HurtState(Animator animator, Rigidbody2D playerRB)
+    {
+        this.animator = animator;
+        this.playerRB = playerRB;
+    }
+
     public override void EnterState(PlayerStateManager manager)
     {
-        animator = manager.GetComponent<Animator>();
-        animator.SetTrigger("Hurt");
+        Debug.Log("HurtState");
+        playerRB.velocity = Vector2.zero;
     }
 
     public override void PhysicsUpdate(PlayerStateManager manager)
@@ -19,7 +27,7 @@ public class HurtState : BaseState
     public override void UpdateState(PlayerStateManager manager)
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("P1_hurt"))
-            manager.SwitchState(manager.idleState);
+            manager.SwitchState(manager.runState);
     }
 
 }

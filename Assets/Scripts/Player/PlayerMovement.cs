@@ -7,29 +7,21 @@ public class PlayerMovement : PlayerInput
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
-    [SerializeField] private ReconheceChao reconheceChao;
+    [SerializeField] private GroundCollider groundCollider;
 
     [Header("Attributes")]
-    [SerializeField] private float velocity;
-    [SerializeField] private float jumpTimer = 1.5f;
-    [SerializeField] private float jumpFactor;
+    [SerializeField] private PlayerData playerData;
+    [SerializeField] private float jumpTimer;
 
     // Update is called once per frame
-    private void Start()
-    {
-        animator.SetFloat("velocidadeAerea", -1f);
+    private void Start() => jumpTimer = playerData.jumpTimer;
 
-    }
-    void FixedUpdate()
-    {
-        jumpTimer -= Time.fixedDeltaTime;
-    }
+    void FixedUpdate() => jumpTimer -= Time.fixedDeltaTime;
 
-    public void Move()
+    public void Move(bool isGrounded)
     {
-        animator.SetBool("estaChao", true);
-        rb.velocity = new Vector2(InputMove() * velocity, rb.velocity.y);
-        animator.SetFloat("velocidadeAerea", rb.velocity.y);
+        animator.SetBool("estaChao", isGrounded);
+        rb.velocity = new Vector2(InputMove() * playerData.velocity, rb.velocity.y);
         
         if (Mathf.Abs(InputMove())> Mathf.Epsilon)
         {
@@ -41,22 +33,23 @@ public class PlayerMovement : PlayerInput
         ChangeDirection(InputMove());
     }
 
-    //chao = true; subir no y; entra na anim de pulo
 
-    public void Jump(bool chao)
+    public void Jump(bool isGrounded)
     {
-        animator.SetBool("estaChao", chao);
+        animator.SetBool("estaChao", isGrounded);
         if (jumpTimer <= 0f)
         {
-            if (InputJump() && chao)
+            if (InputJump() && isGrounded)
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpFactor);
-                chao = false;
-                animator.SetBool("estaChao", chao);
-                jumpTimer = 1.5f;
+                animator.SetTrigger("pulo");
+                rb.velocity = new Vector2(rb.velocity.x, playerData.jumpFactor);
+                isGrounded = false;
+                animator.SetBool("estaChao", isGrounded);
+                jumpTimer = playerData.jumpTimer;
             }
         }
     }
+
     private void ChangeDirection(float input)
     {
         if(this.playerType == PlayerType.PLAYER1)
@@ -74,9 +67,6 @@ public class PlayerMovement : PlayerInput
                 transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
-    void RunSoundEvent()
-    {
-        AudioManager.instance.RunSound();    
-    }
+    void RunSoundEvent() => AudioManager.instance.RunSound();    
 
 }

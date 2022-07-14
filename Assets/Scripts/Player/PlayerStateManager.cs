@@ -6,23 +6,23 @@ using UnityEngine;
 public class PlayerStateManager : PlayerInput
 {
     public PlayerMovement playerMov;
-    public ReconheceChao groundCollider;
-    public PlayerData playerData;
+    public GroundCollider groundCollider;
+    public Rigidbody2D playerRB;
+    public Animator playerAnim;
     //abstract state
     BaseState currentState;
 
     //concrete state(s)
-    public HurtState hurtState = new HurtState();
-    public IdleState idleState; 
+    public HurtState hurtState;
     public RunState runState;
     public JumpState jumpState;
 
 
     private void Awake()
     {
-        idleState = new IdleState();
-        runState = new RunState(playerMov);
+        runState = new RunState(playerMov, groundCollider);
         jumpState = new JumpState(playerMov);
+        hurtState = new HurtState(playerAnim, playerRB);
     }
     void Start()
     {
@@ -44,14 +44,6 @@ public class PlayerStateManager : PlayerInput
 
     void FixedUpdate()
     {
- 
         currentState.PhysicsUpdate(this);
     }
 }
-
-/*
-    idle -> run : com movimento
-    idle -> jump : quando ele não está no chão
-
- 
- */

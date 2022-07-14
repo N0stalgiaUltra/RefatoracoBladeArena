@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReconheceChao : MonoBehaviour
+public class GroundCollider : MonoBehaviour
 {
     public bool chao;
 

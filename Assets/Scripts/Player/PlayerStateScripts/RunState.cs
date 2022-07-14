@@ -6,10 +6,12 @@ public class RunState : BaseState
 {
 
     protected PlayerMovement player;
+    private GroundCollider grounded;
 
-    public RunState(PlayerMovement player)
+    public RunState(PlayerMovement player, GroundCollider grounded)
     {
         this.player = player;
+        this.grounded = grounded;
     }
 
     public override void EnterState(PlayerStateManager manager)
@@ -27,7 +29,7 @@ public class RunState : BaseState
 
     public override void PhysicsUpdate(PlayerStateManager manager)
     {        
-        player.Move();
+        player.Move(grounded.chao);
     }
 
 
