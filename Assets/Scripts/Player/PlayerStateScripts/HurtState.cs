@@ -11,6 +11,10 @@ public class HurtState : BaseState
         animator.SetTrigger("Hurt");
     }
 
+    public override void PhysicsUpdate(PlayerStateManager manager)
+    {
+        throw new System.NotImplementedException();
+    }
 
     public override void UpdateState(PlayerStateManager manager)
     {

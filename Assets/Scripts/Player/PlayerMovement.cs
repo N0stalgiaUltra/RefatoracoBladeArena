@@ -15,17 +15,19 @@ public class PlayerMovement : PlayerInput
     [SerializeField] private float jumpFactor;
 
     // Update is called once per frame
+    private void Start()
+    {
+        animator.SetFloat("velocidadeAerea", -1f);
+
+    }
     void FixedUpdate()
     {
         jumpTimer -= Time.fixedDeltaTime;
-        Move();
-
-        Jump(reconheceChao.chao);
-        
     }
-    
-    private void Move()
+
+    public void Move()
     {
+        animator.SetBool("estaChao", true);
         rb.velocity = new Vector2(InputMove() * velocity, rb.velocity.y);
         animator.SetFloat("velocidadeAerea", rb.velocity.y);
         
@@ -39,15 +41,15 @@ public class PlayerMovement : PlayerInput
         ChangeDirection(InputMove());
     }
 
-    private void Jump(bool chao)
+    //chao = true; subir no y; entra na anim de pulo
+
+    public void Jump(bool chao)
     {
         animator.SetBool("estaChao", chao);
-
-        if(jumpTimer <= 0f)
+        if (jumpTimer <= 0f)
         {
             if (InputJump() && chao)
             {
-                animator.SetTrigger("pulo");
                 rb.velocity = new Vector2(rb.velocity.x, jumpFactor);
                 chao = false;
                 animator.SetBool("estaChao", chao);

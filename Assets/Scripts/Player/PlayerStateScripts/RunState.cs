@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class RunState : BaseState
 {
-    Rigidbody2D rb;
-    Animator animator;
-    Transform playerTransform;
 
-    public RunState(Rigidbody2D rb, Animator animator, Transform playerTransform)
+    protected PlayerMovement player;
+
+    public RunState(PlayerMovement player)
     {
-        this.rb = rb;
-        this.animator = animator;
-        this.playerTransform = playerTransform;
+        this.player = player;
     }
 
     public override void EnterState(PlayerStateManager manager)
@@ -23,43 +20,16 @@ public class RunState : BaseState
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        Move(manager);
+        if (manager.InputJump())
+            manager.SwitchState(manager.jumpState);
     }
 
-    private void Move(PlayerStateManager manager)
-    {
-        rb.velocity = new Vector2(manager.InputMove() * 4, rb.velocity.y); 
-        //animator.SetFloat("velocidadeAerea", rb.velocity.y); 
 
-        if (Mathf.Abs(manager.InputMove()) > Mathf.Epsilon)
-        {
-            animator.SetInteger("estadoAnim", 1);
-        }
-        else
-        {
-            animator.SetInteger("estadoAnim", 0);
-            manager.SwitchState(manager.idleState);
-        }
-
-        ChangeDirection(manager);
+    public override void PhysicsUpdate(PlayerStateManager manager)
+    {        
+        player.Move();
     }
 
-    private void ChangeDirection(PlayerStateManager manager)
-    {
 
-        if (manager.playerType == PlayerInput.PlayerType.PLAYER1)
-        {
-            if (manager.InputMove() > 0)
-                playerTransform.eulerAngles = new Vector3(0, 0, 0);
-            else if (manager.InputMove() < 0)
-                playerTransform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else
-        {
-            if (manager.InputMove() > 0)
-                playerTransform.eulerAngles = new Vector3(0, 180, 0);
-            else if (manager.InputMove() < 0)
-                playerTransform.eulerAngles = new Vector3(0, 0, 0);
-        }
-    }
+
 }

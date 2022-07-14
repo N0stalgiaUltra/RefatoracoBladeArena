@@ -8,26 +8,13 @@ public class ReconheceChao : MonoBehaviour
 
     void OnTriggerEnter2D ( Collider2D other)
     {
-        if(other.gameObject.tag == "Plataforma")
-        {
+        if (other.CompareTag("Plataforma") || other.CompareTag("Plataforma2"))
             chao = true;
-        }    
-        
-        if(other.gameObject.tag == "Plataforma2")
-        {
-            chao = true;
-        }    
     }
-      void OnTriggerExit2D ( Collider2D other)
+    void OnTriggerExit2D ( Collider2D other)
     {
-        if(other.gameObject.tag == "Plataforma")
-        {
+        if (other.CompareTag("Plataforma") || other.CompareTag("Plataforma2"))
             chao = false;
-        } 
-        if(other.gameObject.tag == "Plataforma2")
-        {
-            chao = false;
-        }       
     }
 
 }

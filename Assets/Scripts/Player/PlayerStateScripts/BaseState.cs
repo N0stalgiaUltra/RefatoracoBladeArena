@@ -7,5 +7,7 @@ public abstract class BaseState
 
     public abstract void UpdateState(PlayerStateManager manager);
 
+    public abstract void PhysicsUpdate(PlayerStateManager manager);
+
    // public abstract void OnCollisionEnter(PlayerStateManager manager);
 }
