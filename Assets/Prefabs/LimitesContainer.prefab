@@ -126,7 +126,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5676352958739429467}
-  - component: {fileID: 5676352958739429464}
   m_Layer: 0
   m_Name: LimitesContainer
   m_TagString: Untagged
@@ -151,22 +150,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5676352958739429464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5676352958739429466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c70914508a03d047b2d947a181cb4a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  limDir: {fileID: 5676352957494508152}
-  limEsq: {fileID: 5676352957545737495}
-  p1: {fileID: 0}
-  p2: {fileID: 0}
-  direita: {fileID: 5676352957494508153}
-  esquerda: {fileID: 5676352957545737493}
-  cima: {fileID: 5676352957945225956}

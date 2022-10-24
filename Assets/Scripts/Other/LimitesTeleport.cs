@@ -5,47 +5,28 @@ using UnityEngine;
 
 public class LimitesTeleport : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    
-    public GameObject limDir, limEsq;
-    public Transform p1, p2, direita, esquerda, cima, adaga;
-    void Start()
-    {
-       
 
+    [SerializeField] private GameObject limitsParent;
+    private Transform leftEnd;
+    private Transform rightEnd;
+
+    private void Start()
+    {
+        leftEnd = limitsParent.transform.GetChild(0).transform;
+        rightEnd = limitsParent.transform.GetChild(1).transform;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
        
-        if(p1.position.x > direita.position.x)
+        if(this.transform.position.x > rightEnd.position.x)
         {
-            p1.position = new Vector2(esquerda.position.x, p1.position.y);
+            this.transform.position = new Vector2(leftEnd.position.x, this.transform.position.y);
         }
-        else if(p1.position.x < esquerda.position.x)
+        else if(this.transform.position.x < leftEnd.position.x)
         {
-            p1.position = new Vector2(direita.position.x, p1.position.y);
-        }
-
-        if(p2.position.x > direita.position.x)
-        {
-            p2.position = new Vector2(esquerda.position.x, p2.position.y);
-        }
-        else if(p2.position.x < esquerda.position.x)
-        {
-            p2.position = new Vector2(direita.position.x, p2.position.y);
-        }
-        
-        if (adaga.transform.position.x > direita.transform.position.x)
-        {
-            adaga.transform.position = new Vector2(esquerda.transform.position.x, adaga.transform.position.y);
-        }
-        else if (adaga.transform.position.x < esquerda.transform.position.x)
-        {
-            adaga.transform.position = new Vector2(direita.transform.position.x, adaga.transform.position.y);
-
+            this.transform.position = new Vector2(rightEnd.position.x, this.transform.position.y);
         }
     }
 

@@ -106,6 +106,8 @@ GameObject:
   - component: {fileID: 802344129530977131}
   - component: {fileID: 3362876753447326818}
   - component: {fileID: 981261600}
+  - component: {fileID: 549140467}
+  - component: {fileID: 549140466}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -122,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 8757843599845629859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.03, y: -4.59, z: 1.587966}
-  m_LocalScale: {x: 0.9156758, y: 0.98313516, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8757843599079645160}
   - {fileID: 8757843598266549455}
@@ -263,10 +265,9 @@ MonoBehaviour:
   playerType: 0
   rb: {fileID: 8757843599845629869}
   animator: {fileID: 8757843599845629864}
-  reconheceChao: {fileID: 165310803}
-  velocity: 0
+  groundCollider: {fileID: 165310803}
+  playerData: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
   jumpTimer: 1.5
-  jumpFactor: 0
 --- !u!114 &3362876753447326818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +297,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8757843599845629864}
+--- !u!114 &549140467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757843599845629859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e44ba46c2b4ab243a7fdc485d378f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 0
+  playerMov: {fileID: 802344129530977131}
+  groundCollider: {fileID: 165310803}
+  playerRB: {fileID: 8757843599845629869}
+  playerAnim: {fileID: 8757843599845629864}
+--- !u!114 &549140466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757843599845629859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c70914508a03d047b2d947a181cb4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitsParent: {fileID: 5676352958739429466, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
 --- !u!1 &8757843599985632122
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,4 +397,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6571ecf40684e1b48905d8cb63c3a367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chao: 0
