@@ -15,16 +15,16 @@ public class Dagger : MonoBehaviour
         daggerPool = FindObjectOfType<DaggerPool>();
 
     }
-    void Start()
+    private void OnEnable()
     {
-        rb.velocity = transform.right * daggerData.velocity;
-
+        AddVelocity();
     }
-
     private void OnDisable()
     {
+        rb.velocity = Vector2.zero;
         daggerPool.ReplenishQueue(this);
     }
 
+    private void AddVelocity() => rb.velocity = transform.right * daggerData.velocity;
 
 }

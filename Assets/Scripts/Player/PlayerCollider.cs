@@ -9,7 +9,8 @@ public class PlayerCollider : MonoBehaviour, ICollider
     private string colliderTag;
     public void GetHit()
     {
-        animator.SetTrigger("Hurt");
+        if(colliderTag.Equals("Dagger"))
+            animator.SetTrigger("Hurt");
 
     }
     void OnCollisionEnter2D(Collision2D other)

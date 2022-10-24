@@ -23,24 +23,20 @@ public class DaggerCollider : MonoBehaviour, ICollider
             ScoreManager.instance.P1Score++;
         }
 
-        if (colliderTag.Equals("Adaga"))
+        if (colliderTag.Equals("Dagger"))
             AudioManager.instance.DaggerHitSound();
 
         this.gameObject.SetActive(false);
-        //Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-
         colliderTag = other.gameObject.tag;
-
         GetHit();
     }
 
     private void OnBecameInvisible()
     {
-
-        //Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }

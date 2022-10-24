@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Plataforma
+  - Plataforma2
+  - Adaga
+  - LimiteDireita
+  - LimiteEsquerda
+  - Player1
+  - Player2
+  - Dagger
   layers:
   - Default
   - TransparentFX
