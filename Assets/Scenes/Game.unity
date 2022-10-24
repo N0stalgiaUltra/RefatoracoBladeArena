@@ -1560,6 +1560,14 @@ PrefabInstance:
       propertyPath: jumpFactor
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 802344129530977131, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
+    - target: {fileID: 802344129530977131, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: groundCollider
+      value: 
+      objectReference: {fileID: 1490651504}
     - target: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: m_Name
       value: PlayerStateTeste
@@ -1647,7 +1655,8 @@ MonoBehaviour:
   playerType: 0
   playerMov: {fileID: 549140469}
   groundCollider: {fileID: 1490651504}
-  playerData: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
+  playerRB: {fileID: 549140471}
+  playerAnim: {fileID: 549140470}
 --- !u!114 &549140469 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 802344129530977131, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
@@ -1659,6 +1668,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &549140470 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8757843599845629864, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  m_PrefabInstance: {fileID: 549140463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &549140471 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8757843599845629869, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  m_PrefabInstance: {fileID: 549140463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570544913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,6 +2896,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441629712}
   m_CullTransparentMesh: 0
+--- !u!114 &1447207409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1468743372, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
+  m_PrefabInstance: {fileID: 5174760510094113619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6571ecf40684e1b48905d8cb63c3a367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1477186962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4518,7 +4548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2053016339, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2053016340, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
       propertyPath: velocity
@@ -4528,6 +4558,14 @@ PrefabInstance:
       propertyPath: jumpFactor
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2053016340, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
+    - target: {fileID: 2053016340, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
+      propertyPath: groundCollider
+      value: 
+      objectReference: {fileID: 1447207409}
     - target: {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
       propertyPath: m_Name
       value: Player2

@@ -5,10 +5,12 @@ using UnityEngine;
 //Context
 public class PlayerStateManager : PlayerInput
 {
-    public PlayerMovement playerMov;
-    public GroundCollider groundCollider;
-    public Rigidbody2D playerRB;
-    public Animator playerAnim;
+    [SerializeField] private PlayerMovement playerMov;
+    [SerializeField] private GroundCollider groundCollider;
+    [SerializeField] private Rigidbody2D playerRB;
+    [SerializeField] private Animator playerAnim;
+    
+
     //abstract state
     BaseState currentState;
 
@@ -21,7 +23,7 @@ public class PlayerStateManager : PlayerInput
     private void Awake()
     {
         runState = new RunState(playerMov, groundCollider);
-        jumpState = new JumpState(playerMov);
+        jumpState = new JumpState(playerMov, groundCollider);
         hurtState = new HurtState(playerAnim, playerRB);
     }
     void Start()

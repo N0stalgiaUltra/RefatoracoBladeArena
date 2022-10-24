@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundCollider : MonoBehaviour
 {
-    public bool chao;
+    private bool chao;
 
     void OnTriggerEnter2D ( Collider2D other)
     {
@@ -16,5 +16,7 @@ public class GroundCollider : MonoBehaviour
         if (other.CompareTag("Plataforma") || other.CompareTag("Plataforma2"))
             chao = false;
     }
+
+    public bool IsGrounded { get { return chao; } }
 
 }

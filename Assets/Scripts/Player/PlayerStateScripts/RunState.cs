@@ -5,8 +5,8 @@ using UnityEngine;
 public class RunState : BaseState
 {
 
-    protected PlayerMovement player;
-    private GroundCollider grounded;
+    private readonly PlayerMovement player;
+    private readonly GroundCollider grounded;
 
     public RunState(PlayerMovement player, GroundCollider grounded)
     {
@@ -16,7 +16,6 @@ public class RunState : BaseState
 
     public override void EnterState(PlayerStateManager manager)
     {
-        Debug.Log("RunState");
     }
 
 
@@ -29,7 +28,7 @@ public class RunState : BaseState
 
     public override void PhysicsUpdate(PlayerStateManager manager)
     {        
-        player.Move(grounded.chao);
+        player.Move(grounded.IsGrounded);
     }
 
 

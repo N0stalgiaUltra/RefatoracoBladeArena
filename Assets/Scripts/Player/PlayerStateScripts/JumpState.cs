@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class JumpState : BaseState
 {
-    PlayerMovement playerMovement;
-    
-    public JumpState(PlayerMovement playerMovement)
+    private readonly PlayerMovement playerMovement;
+    private readonly GroundCollider groundCollider;
+    public JumpState(PlayerMovement playerMov, GroundCollider groundCol)
     {
-        this.playerMovement = playerMovement;
+        this.playerMovement = playerMov;
+        this.groundCollider = groundCol;
     }
 
     public override void EnterState(PlayerStateManager manager)
@@ -26,8 +27,8 @@ public class JumpState : BaseState
 
     public override void PhysicsUpdate(PlayerStateManager manager)
     {
-        playerMovement.Jump(manager.groundCollider.chao);
-        Debug.Log($"isGrounded: {manager.groundCollider.chao}");
+        playerMovement.Jump(groundCollider.IsGrounded);
+        Debug.Log($"isGrounded: {groundCollider.IsGrounded}");
         manager.SwitchState(manager.runState);
     }
 }

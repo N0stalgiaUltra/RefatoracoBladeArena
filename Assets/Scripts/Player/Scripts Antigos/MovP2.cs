@@ -25,7 +25,7 @@ public class MovP2 : MonoBehaviour
         float p1x = Input.GetAxis("Horizontal2");
         rb.velocity = new Vector2(p1x * velocidade, rb.velocity.y);
         animator.SetFloat("velocidadeAerea", rb.velocity.y);
-        r_chao = sensor.GetComponent<GroundCollider>().chao;
+        //r_chao = sensor.GetComponent<GroundCollider>().chao;
         
         
         
