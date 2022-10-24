@@ -31,21 +31,14 @@ public class DaggerCollider : MonoBehaviour, ICollider
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (other.gameObject.CompareTag("Player1"))
-            colliderTag = "Player1";
-
-        if (other.gameObject.CompareTag("Player2"))
-            colliderTag = "Player2";
-
-        if (other.gameObject.CompareTag("Adaga"))
-            colliderTag = "Adaga";
-
-        if (other.gameObject.CompareTag("Plataforma"))
-            colliderTag = "Plataforma";
-
-        if (other.gameObject.CompareTag("Plataforma2"))
-            colliderTag = "Plataforma2";
+        colliderTag = other.gameObject.tag;
 
         GetHit();
+    }
+
+    private void OnBecameInvisible()
+    {
+
+        Destroy(this.gameObject);
     }
 }

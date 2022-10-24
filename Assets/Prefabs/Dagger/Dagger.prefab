@@ -147,12 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1365953838887177169}
-  veloAdaga: 5
-  player: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
-  Player2: {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
-  limitesContainer: {fileID: 5676352958739429466, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
-  direita: {fileID: 0}
-  esquerda: {fileID: 0}
+  daggerData: {fileID: 11400000, guid: 36971bf4dfabf2449a78ff46503cb320, type: 2}
 --- !u!114 &7959929506486877853
 MonoBehaviour:
   m_ObjectHideFlags: 0
