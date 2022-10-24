@@ -8,5 +8,6 @@ public class PlayerData : ScriptableObject
     public float velocity;
     public float jumpTimer;
     public float jumpFactor;
+    public float shootRate;
 }
 

@@ -6,12 +6,13 @@ public class PlayerShoot : PlayerInput
 {
     [SerializeField] private Transform spawnDagger;
     [SerializeField] private DaggerPool daggerPool;
+    [SerializeField] private PlayerData data;
+    
     private bool input;
-
-    [SerializeField] private float timer = 1.5f;
+    private float timer;
     private void Start()
     {
-        timer = 0f;
+        timer = data.shootRate;
     }
     private void Update()
     {
@@ -21,17 +22,10 @@ public class PlayerShoot : PlayerInput
         if (input && timer <= 0f)
         {
             daggerPool.DaggerSpawn(spawnDagger);
-            timer = 1.5f;
+            timer = data.shootRate;
         }
             
 
     }
-
-    //public void Shoot()
-    //{
-    //    GameObject aux = Instantiate(dagger, spawnDagger.position, spawnDagger.rotation);
-    //    //toca som
-    //    Destroy(aux, 3.75f);
-    //}
 
 }

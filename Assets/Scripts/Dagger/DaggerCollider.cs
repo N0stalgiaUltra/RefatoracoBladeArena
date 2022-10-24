@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class DaggerCollider : MonoBehaviour, ICollider
 {
+    private ScoreManager scoreManager;
     private string colliderTag;
+
+    private void Awake()
+    {
+        scoreManager = FindObjectOfType<ScoreManager>();
+    }
 
     public void GetHit()
     {
@@ -14,13 +20,13 @@ public class DaggerCollider : MonoBehaviour, ICollider
         if (colliderTag.Equals("Player1"))
         {
             AudioManager.instance.ScoreSound();
-            ScoreManager.instance.P2Score++;
+            scoreManager.P2Score++;
         }
 
         if (colliderTag.Equals("Player2"))
         {
             AudioManager.instance.ScoreSound();
-            ScoreManager.instance.P1Score++;
+            scoreManager.P1Score++;
         }
 
         if (colliderTag.Equals("Dagger"))

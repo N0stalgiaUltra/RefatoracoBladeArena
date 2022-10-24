@@ -267,7 +267,6 @@ MonoBehaviour:
   animator: {fileID: 8757843599845629864}
   groundCollider: {fileID: 165310803}
   playerData: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
-  jumpTimer: 1.5
 --- !u!114 &3362876753447326818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,9 +280,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 0
-  dagger: {fileID: 1365953838887177175, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
   spawnDagger: {fileID: 8757843599079645160}
-  timer: 3
+  daggerPool: {fileID: 0}
+  data: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
 --- !u!114 &981261600
 MonoBehaviour:
   m_ObjectHideFlags: 0

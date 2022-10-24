@@ -11,7 +11,7 @@ public class PlayerMovement : PlayerInput
 
     [Header("Attributes")]
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private float jumpTimer;
+    private float jumpTimer;
 
     // Update is called once per frame
     private void Start() => jumpTimer = playerData.jumpTimer;

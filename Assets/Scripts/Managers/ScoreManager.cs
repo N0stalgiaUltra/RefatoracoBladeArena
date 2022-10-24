@@ -10,17 +10,6 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private int scoreToBeat;
 
-    public static ScoreManager instance;
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(instance);
-        }
-        else
-            instance = this;
-    }
-
     private void Start()
     {
         this.p1Score = p2Score = 0;
