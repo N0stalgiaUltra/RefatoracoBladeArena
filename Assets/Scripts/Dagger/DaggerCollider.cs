@@ -5,6 +5,7 @@ using UnityEngine;
 public class DaggerCollider : MonoBehaviour, ICollider
 {
     private string colliderTag;
+
     public void GetHit()
     {
         if(colliderTag.Equals("Plataforma") || colliderTag.Equals("Plataforma2"))
@@ -25,7 +26,8 @@ public class DaggerCollider : MonoBehaviour, ICollider
         if (colliderTag.Equals("Adaga"))
             AudioManager.instance.DaggerHitSound();
 
-        Destroy(gameObject);
+        this.gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -39,6 +41,6 @@ public class DaggerCollider : MonoBehaviour, ICollider
     private void OnBecameInvisible()
     {
 
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

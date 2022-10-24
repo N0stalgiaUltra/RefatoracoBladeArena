@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerShoot : PlayerInput
 {
-    [SerializeField] private GameObject dagger;
     [SerializeField] private Transform spawnDagger;
-
+    [SerializeField] private DaggerPool daggerPool;
     private bool input;
 
     [SerializeField] private float timer = 1.5f;
@@ -21,18 +20,18 @@ public class PlayerShoot : PlayerInput
 
         if (input && timer <= 0f)
         {
-            Shoot();
+            daggerPool.DaggerSpawn(spawnDagger);
             timer = 1.5f;
         }
             
 
     }
 
-    public void Shoot()
-    {
-        GameObject aux = Instantiate(dagger, spawnDagger.position, spawnDagger.rotation);
-        //toca som
-        Destroy(aux, 3.75f);
-    }
+    //public void Shoot()
+    //{
+    //    GameObject aux = Instantiate(dagger, spawnDagger.position, spawnDagger.rotation);
+    //    //toca som
+    //    Destroy(aux, 3.75f);
+    //}
 
 }

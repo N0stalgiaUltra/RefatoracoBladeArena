@@ -1544,6 +1544,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 369169966}
     m_Modifications:
+    - target: {fileID: 3362876753447326818, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: daggerPool
+      value: 
+      objectReference: {fileID: 1411494167}
     - target: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: m_Name
       value: PlayerStateTeste
@@ -2679,6 +2683,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1411494165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411494166}
+  - component: {fileID: 1411494168}
+  - component: {fileID: 1411494167}
+  m_Layer: 0
+  m_Name: DaggerPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411494166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411494165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1411494167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411494165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a34adf9a330c944281bfbd225ccac22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daggerFactory: {fileID: 1411494168}
+  capacity: 3
+--- !u!114 &1411494168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411494165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e4ec96903ed034d9bb958704de22c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daggerPrefab: {fileID: 4572320775393593482, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
 --- !u!1 &1437046312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1585158497926362021, guid: 34427f19628fe7349bad9aad239a30c2, type: 3}
