@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerShoot : PlayerInput
 {
     [SerializeField] private Transform spawnDagger;
-    [SerializeField] private DaggerPool daggerPool;
     [SerializeField] private PlayerData data;
+    private DaggerPool daggerPool;
+    
     
     private bool input;
     private float timer;
     private void Start()
     {
-        timer = data.shootRate;
+        daggerPool = FindObjectOfType<DaggerPool>();
+        timer = 0f;
     }
     private void Update()
     {

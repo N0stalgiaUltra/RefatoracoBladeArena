@@ -27,16 +27,30 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected TextMeshProUGUI screenText;
     [SerializeField] private VictoryScreen victoryScreen;
     // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private GameObject player;
+    private void Start()
     {
-        GameStart();
+        GameStart(true);
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            GameObject aux = Instantiate(player, transform.position, Quaternion.identity);
+            aux.GetComponent<PlayerType>().SetType(PlayerType.TypePlayer.PLAYER1);
+        }
+    }
     /// <summary>
     /// Called whenever a match starts
     /// </summary>
-    private void GameStart() 
+    public void GameStart(bool localMultiplayer) 
     {
+        //if true -> instantiate both players and set input;
+        //if false -> get multiplayer setting for input
+
+        if(localMultiplayer)
         Time.timeScale = 1;
         AudioManager.instance.BackgroundSound();
     }

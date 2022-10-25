@@ -52,7 +52,7 @@ public class PlayerMovement : PlayerInput
 
     private void ChangeDirection(float input)
     {
-        if(this.playerType == PlayerType.PLAYER1)
+        if(GetTypePlayer() == TypePlayer.PLAYER1)
         {
             if (input > 0)
                 transform.eulerAngles = new Vector3(0, 0, 0);

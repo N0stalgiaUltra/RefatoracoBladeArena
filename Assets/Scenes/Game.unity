@@ -1552,6 +1552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerStateTeste
       objectReference: {fileID: 0}
+    - target: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8757843599845629871, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2351,6 +2355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenText: {fileID: 1595988129}
   victoryScreen: {fileID: 228394988}
+  player: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
 --- !u!4 &1115228182
 Transform:
   m_ObjectHideFlags: 0
@@ -4545,7 +4550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5174760509454315589, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
       propertyPath: m_RootOrder
