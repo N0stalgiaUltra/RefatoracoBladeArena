@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : PlayerInput
 {
     [SerializeField] private Transform spawnDagger;
-    [SerializeField] private PlayerData data;
+    [SerializeField] private CharacterData data;
     private DaggerPool daggerPool;
     
     

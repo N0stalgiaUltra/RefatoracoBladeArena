@@ -10,7 +10,7 @@ public class PlayerMovement : PlayerInput
     [SerializeField] private GroundCollider groundCollider;
 
     [Header("Attributes")]
-    [SerializeField] private PlayerData playerData;
+    [SerializeField] private CharacterData playerData;
     private float jumpTimer;
 
     // Update is called once per frame

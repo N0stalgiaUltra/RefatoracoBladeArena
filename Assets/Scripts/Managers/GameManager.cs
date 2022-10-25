@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     [Header("End Game Attributes")]
     [SerializeField] protected TextMeshProUGUI screenText;
     [SerializeField] private VictoryScreen victoryScreen;
+    
+    
+    [SerializeField] private PlayerFactory playerFactory;
     // Start is called before the first frame update
 
     [SerializeField] private GameObject player;
@@ -38,8 +41,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            GameObject aux = Instantiate(player, transform.position, Quaternion.identity);
-            aux.GetComponent<PlayerType>().SetType(PlayerType.TypePlayer.PLAYER1);
+            playerFactory.GetNewInstance();
         }
     }
     /// <summary>
