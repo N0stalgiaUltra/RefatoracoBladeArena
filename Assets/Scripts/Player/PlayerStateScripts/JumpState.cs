@@ -14,7 +14,7 @@ public class JumpState : BaseState
 
     public override void EnterState(PlayerStateManager manager)
     {
-        Debug.Log("JumpState");
+        Debug.Log($"JumpState + {playerMovement.GetTypePlayer()}");
         //Debug.Log($"isGrounded: {manager.groundCollider.chao}");
 
     }
@@ -28,7 +28,7 @@ public class JumpState : BaseState
     public override void PhysicsUpdate(PlayerStateManager manager)
     {
         playerMovement.Jump(groundCollider.IsGrounded);
-        Debug.Log($"isGrounded: {groundCollider.IsGrounded}");
+        //Debug.Log($"isGrounded: {groundCollider.IsGrounded}");
         manager.SwitchState(manager.runState);
     }
 }

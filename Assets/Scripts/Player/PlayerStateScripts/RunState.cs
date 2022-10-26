@@ -16,12 +16,16 @@ public class RunState : BaseState
 
     public override void EnterState(PlayerStateManager manager)
     {
+        //Debug.Log($"{this.player.GetTypePlayer()}");
     }
 
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        if (manager.InputJump())
+        //if (manager.InputJump(manager.GetTypePlayer()))
+        //    manager.SwitchState(manager.jumpState);
+
+        if (player.InputJump())
             manager.SwitchState(manager.jumpState);
     }
 

@@ -24,10 +24,12 @@ public abstract class PlayerInput : PlayerType
     
     public bool InputJump()
     {
+
         if (GetTypePlayer() == TypePlayer.PLAYER1)
             return Input.GetButton("Jmp");
         else
             return Input.GetButton("Jmp2");
+
     }
 }
 

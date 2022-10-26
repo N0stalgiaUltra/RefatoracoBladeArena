@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Context
-public class PlayerStateManager : PlayerInput
+//public class PlayerStateManager : PlayerInput
+public class PlayerStateManager : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMov;
     [SerializeField] private GroundCollider groundCollider;
@@ -22,9 +23,9 @@ public class PlayerStateManager : PlayerInput
 
     private void Awake()
     {
-        runState = new RunState(playerMov, groundCollider);
-        jumpState = new JumpState(playerMov, groundCollider);
-        hurtState = new HurtState(playerAnim, playerRB);
+        runState = new RunState(this.playerMov, this.groundCollider);
+        jumpState = new JumpState(this.playerMov, this.groundCollider);
+        hurtState = new HurtState(this.playerAnim, this.playerRB);
     }
     void Start()
     {

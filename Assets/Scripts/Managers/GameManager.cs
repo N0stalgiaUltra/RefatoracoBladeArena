@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    #region Singleton
+    #region TODO: Remove Singleton
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
@@ -39,20 +39,26 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            playerFactory.GetNewInstance();
-        }
+
     }
     /// <summary>
-    /// Called whenever a match starts
+    /// TODO: Redo the summary for the GameStartMethod
     /// </summary>
     public void GameStart(bool localMultiplayer) 
     {
         //if true -> instantiate both players and set input;
         //if false -> get multiplayer setting for input
 
-        if(localMultiplayer)
+        if (localMultiplayer)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                playerFactory.PlayerInputType = i;
+                playerFactory.GetNewInstance();
+            }
+
+        }
+
         Time.timeScale = 1;
         AudioManager.instance.BackgroundSound();
     }

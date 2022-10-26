@@ -103,14 +103,14 @@ GameObject:
   - component: {fileID: 8757843599845629858}
   - component: {fileID: 8757843599845629869}
   - component: {fileID: 8757843599845629864}
-  - component: {fileID: 802344129530977131}
-  - component: {fileID: 3362876753447326818}
-  - component: {fileID: 981261600}
-  - component: {fileID: 549140467}
-  - component: {fileID: 549140466}
+  - component: {fileID: 6144710506579506944}
+  - component: {fileID: 6312399075987186146}
+  - component: {fileID: 2974081293924833455}
+  - component: {fileID: 2924159710930269167}
+  - component: {fileID: 1869212721956134129}
   m_Layer: 0
   m_Name: Player3Test
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +250,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &802344129530977131
+--- !u!114 &6144710506579506944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,7 +266,20 @@ MonoBehaviour:
   animator: {fileID: 8757843599845629864}
   groundCollider: {fileID: 165310803}
   playerData: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
---- !u!114 &3362876753447326818
+--- !u!114 &6312399075987186146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757843599845629859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74045bfd4b4b8224687d37f6acbe59f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8757843599845629864}
+--- !u!114 &2974081293924833455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,36 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDagger: {fileID: 8757843599079645160}
   data: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
---- !u!114 &981261600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757843599845629859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74045bfd4b4b8224687d37f6acbe59f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 8757843599845629864}
---- !u!114 &549140467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757843599845629859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e44ba46c2b4ab243a7fdc485d378f41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMov: {fileID: 802344129530977131}
-  groundCollider: {fileID: 165310803}
-  playerRB: {fileID: 8757843599845629869}
-  playerAnim: {fileID: 8757843599845629864}
---- !u!114 &549140466
+--- !u!114 &2924159710930269167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,6 +306,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limitsParent: {fileID: 5676352958739429466, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
+--- !u!114 &1869212721956134129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757843599845629859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e44ba46c2b4ab243a7fdc485d378f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMov: {fileID: 6144710506579506944}
+  groundCollider: {fileID: 165310803}
+  playerRB: {fileID: 8757843599845629869}
+  playerAnim: {fileID: 8757843599845629864}
 --- !u!1 &8757843599985632122
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 165310803}
   m_Layer: 0
   m_Name: DetectorChao1
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

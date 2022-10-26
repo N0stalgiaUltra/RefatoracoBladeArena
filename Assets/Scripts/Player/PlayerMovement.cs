@@ -14,8 +14,14 @@ public class PlayerMovement : PlayerInput
     private float jumpTimer;
 
     // Update is called once per frame
-    private void Start() => jumpTimer = playerData.jumpTimer;
-
+    private void Start() 
+    {
+        jumpTimer = 0f; 
+    }
+    //private void Update()
+    //{
+    //    Jump(true);
+    //}
     void FixedUpdate() => jumpTimer -= Time.fixedDeltaTime;
 
     public void Move(bool isGrounded)
@@ -52,7 +58,7 @@ public class PlayerMovement : PlayerInput
 
     private void ChangeDirection(float input)
     {
-        if(GetTypePlayer() == TypePlayer.PLAYER1)
+        if (GetTypePlayer() == TypePlayer.PLAYER1)
         {
             if (input > 0)
                 transform.eulerAngles = new Vector3(0, 0, 0);
