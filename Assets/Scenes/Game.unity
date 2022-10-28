@@ -153,7 +153,7 @@ Transform:
   - {fileID: 390849277}
   - {fileID: 198996275}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &42464224 stripped
 MonoBehaviour:
@@ -644,7 +644,7 @@ Transform:
   - {fileID: 549140464}
   - {fileID: 784883120}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376905731
 GameObject:
@@ -1266,7 +1266,7 @@ RectTransform:
   - {fileID: 228394985}
   - {fileID: 446519250}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1469,7 +1469,7 @@ Transform:
   - {fileID: 992443769}
   - {fileID: 463413085}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -2786,67 +2786,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1411494165
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1411494166}
-  - component: {fileID: 1411494168}
-  - component: {fileID: 1411494167}
-  m_Layer: 0
-  m_Name: DaggerPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1411494166
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411494165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1411494167
+--- !u!114 &1411494167 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4830284301184549585, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+  m_PrefabInstance: {fileID: 4830284300448560070}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411494165}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a34adf9a330c944281bfbd225ccac22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  daggerFactory: {fileID: 1411494168}
-  capacity: 3
---- !u!114 &1411494168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411494165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e4ec96903ed034d9bb958704de22c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  daggerPrefab: {fileID: 4572320775393593482, guid: fcdd4bf84f0eb22439c6926bf6323999, type: 3}
 --- !u!1 &1437046312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1585158497926362021, guid: 34427f19628fe7349bad9aad239a30c2, type: 3}
@@ -3167,7 +3119,7 @@ RectTransform:
   m_Children:
   - {fileID: 1295768220}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3495,7 +3447,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772319621
 GameObject:
@@ -4527,7 +4479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012991415588160809, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2012991415588160809, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4647,6 +4599,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d56ac4c76467484a942fc52dcce53f7, type: 3}
+--- !u!1001 &4830284300448560070
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549584, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830284301184549587, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
+      propertyPath: m_Name
+      value: DaggerPool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
 --- !u!1001 &5174760510094113619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4761,7 +4770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676352958739429467, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5676352958739429467, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
       propertyPath: m_LocalPosition.x

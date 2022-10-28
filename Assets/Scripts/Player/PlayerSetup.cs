@@ -10,7 +10,6 @@ public class PlayerSetup : PlayerType
     public void Initialize(int i)
     {
         SetType(i);
-        print(this.playerType);
         playerShoot.Setup(this.playerType);
         playerMovement.Setup(this.playerType);
 

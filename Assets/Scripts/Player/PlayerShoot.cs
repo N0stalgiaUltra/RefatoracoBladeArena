@@ -12,10 +12,15 @@ public class PlayerShoot : PlayerInput
 
     public void Setup(TypePlayer typePlayer)
     {
-        print(typePlayer);
         this.playerType = typePlayer;
-        daggerPool = FindObjectOfType<DaggerPool>();
+        if (this.playerType == TypePlayer.PLAYER2)
+            spawnDagger.rotation = Quaternion.Euler(0, 180, 0);
+
         timer = 0f;
+    }
+    private void Start()
+    {
+        daggerPool = FindObjectOfType<DaggerPool>();
     }
     private void Update()
     {
@@ -26,11 +31,10 @@ public class PlayerShoot : PlayerInput
         }
     }
 
-    public void Shoot()
+    private void Shoot()
     {
-        print("Shoot");
-        //daggerPool.DaggerSpawn(spawnDagger);
-        //timer = data.shootRate;
+        daggerPool.DaggerSpawn(spawnDagger);
+        timer = data.shootRate;
     }
 
 }
