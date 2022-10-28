@@ -5,34 +5,35 @@ using UnityEngine;
 public class RunState : BaseState
 {
 
-    private readonly PlayerMovement player;
-    private readonly GroundCollider grounded;
+    private readonly PlayerMovement playerMovement;
+    private readonly GroundCollider groundedCollider;
+    private readonly PlayerShoot playerShoot;
 
-    public RunState(PlayerMovement player, GroundCollider grounded)
+    public RunState(PlayerMovement playerMov, GroundCollider groundedCol, PlayerShoot shoot)
     {
-        this.player = player;
-        this.grounded = grounded;
+        this.playerMovement = playerMov;
+        this.groundedCollider = groundedCol;
+        this.playerShoot = shoot;
     }
 
     public override void EnterState(PlayerStateManager manager)
     {
-        //Debug.Log($"{this.player.GetTypePlayer()}");
     }
 
 
     public override void UpdateState(PlayerStateManager manager)
     {
-        //if (manager.InputJump(manager.GetTypePlayer()))
-        //    manager.SwitchState(manager.jumpState);
+        //if (playerShoot.InputShoot())
+        //    playerShoot.Shoot();
 
-        if (player.InputJump())
+        if (playerMovement.InputJump())
             manager.SwitchState(manager.jumpState);
     }
 
 
     public override void PhysicsUpdate(PlayerStateManager manager)
     {        
-        player.Move(grounded.IsGrounded);
+        playerMovement.Move(groundedCollider.IsGrounded);
     }
 
 

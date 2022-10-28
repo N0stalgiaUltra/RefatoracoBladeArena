@@ -35,12 +35,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameStart(true);
-    }
 
+    }
     private void Update()
     {
 
     }
+
     /// <summary>
     /// TODO: Redo the summary for the GameStartMethod
     /// </summary>
@@ -54,9 +55,9 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < 2; i++)
             {
                 playerFactory.PlayerInputType = i;
-                playerFactory.GetNewInstance();
+                var aux = playerFactory.GetNewInstance();
+                
             }
-
         }
 
         Time.timeScale = 1;

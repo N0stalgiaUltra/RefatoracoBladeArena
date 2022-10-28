@@ -6,10 +6,11 @@ public abstract class PlayerType : MonoBehaviour
 {
     public enum TypePlayer { PLAYER1, PLAYER2 };
 
-    private TypePlayer playerType;
+    [SerializeField] protected TypePlayer playerType;
 
     public void SetType(int id)
     {
+        
         switch (id)
         {
             case 0: playerType = TypePlayer.PLAYER1;
@@ -17,8 +18,9 @@ public abstract class PlayerType : MonoBehaviour
             case 1: playerType = TypePlayer.PLAYER2;
                 break;
         }
+
     }
-    
+
     public TypePlayer GetTypePlayer()
     {
         return playerType;

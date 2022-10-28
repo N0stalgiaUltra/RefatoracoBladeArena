@@ -6,28 +6,31 @@ public class PlayerShoot : PlayerInput
 {
     [SerializeField] private Transform spawnDagger;
     [SerializeField] private CharacterData data;
+
     private DaggerPool daggerPool;
-    
-    
-    private bool input;
     private float timer;
-    private void Start()
+
+    public void Setup(TypePlayer typePlayer)
     {
+        print(typePlayer);
+        this.playerType = typePlayer;
         daggerPool = FindObjectOfType<DaggerPool>();
         timer = 0f;
     }
     private void Update()
     {
         timer -= Time.deltaTime;
-        input = InputShoot();
-
-        if (input && timer <= 0f)
+        if (InputShoot() && timer <= 0f)
         {
-            daggerPool.DaggerSpawn(spawnDagger);
-            timer = data.shootRate;
+            Shoot();
         }
-            
+    }
 
+    public void Shoot()
+    {
+        print("Shoot");
+        //daggerPool.DaggerSpawn(spawnDagger);
+        //timer = data.shootRate;
     }
 
 }

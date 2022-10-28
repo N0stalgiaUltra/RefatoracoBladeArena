@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 8757843599845629858}
   - component: {fileID: 8757843599845629869}
   - component: {fileID: 8757843599845629864}
+  - component: {fileID: -3611837071172064812}
   - component: {fileID: 802344129530977131}
   - component: {fileID: 3362876753447326818}
   - component: {fileID: 981261600}
@@ -250,6 +251,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3611837071172064812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757843599845629859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e166d163f10e2b40b52740c65bd3f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 0
+  playerMovement: {fileID: 802344129530977131}
+  playerShoot: {fileID: 3362876753447326818}
 --- !u!114 &802344129530977131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerType: 0
   spawnDagger: {fileID: 8757843599079645160}
-  daggerPool: {fileID: 0}
   data: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
 --- !u!114 &981261600
 MonoBehaviour:
@@ -308,8 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e44ba46c2b4ab243a7fdc485d378f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
   playerMov: {fileID: 802344129530977131}
+  playerShoot: {fileID: 3362876753447326818}
   groundCollider: {fileID: 165310803}
   playerRB: {fileID: 8757843599845629869}
   playerAnim: {fileID: 8757843599845629864}

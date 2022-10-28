@@ -12,16 +12,12 @@ public class PlayerMovement : PlayerInput
     [Header("Attributes")]
     [SerializeField] private CharacterData playerData;
     private float jumpTimer;
-
-    // Update is called once per frame
-    private void Start() 
+    
+    public void Setup(TypePlayer typePlayer)
     {
-        jumpTimer = 0f; 
+        jumpTimer = 0f;
+        this.playerType = typePlayer;
     }
-    //private void Update()
-    //{
-    //    Jump(true);
-    //}
     void FixedUpdate() => jumpTimer -= Time.fixedDeltaTime;
 
     public void Move(bool isGrounded)
@@ -58,7 +54,7 @@ public class PlayerMovement : PlayerInput
 
     private void ChangeDirection(float input)
     {
-        if (GetTypePlayer() == TypePlayer.PLAYER1)
+        if (this.playerType == TypePlayer.PLAYER1)
         {
             if (input > 0)
                 transform.eulerAngles = new Vector3(0, 0, 0);
@@ -73,6 +69,7 @@ public class PlayerMovement : PlayerInput
                 transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
-    void RunSoundEvent() => AudioManager.instance.RunSound();    
+    void RunSoundEvent() => AudioManager.instance.RunSound();
+
 
 }

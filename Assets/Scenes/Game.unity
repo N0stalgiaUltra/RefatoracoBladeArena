@@ -155,6 +155,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42464224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 802344129530977131, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  m_PrefabInstance: {fileID: 549140463}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101498361
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +625,7 @@ MonoBehaviour:
   - {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
   - {fileID: 8757843599845629859, guid: 414848835b017144095abf06d161f7bb, type: 3}
   playerIndex: 0
+  playerInputType: 0
 --- !u!4 &369169966
 Transform:
   m_ObjectHideFlags: 0
@@ -1561,6 +1573,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 369169966}
     m_Modifications:
+    - target: {fileID: 3362876753447326818, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 42464224}
     - target: {fileID: 3362876753447326818, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
       propertyPath: daggerPool
       value: 

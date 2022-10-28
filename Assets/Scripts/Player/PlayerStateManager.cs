@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Context
-//public class PlayerStateManager : PlayerInput
+
 public class PlayerStateManager : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMov;
+    [SerializeField] private PlayerShoot playerShoot;
     [SerializeField] private GroundCollider groundCollider;
     [SerializeField] private Rigidbody2D playerRB;
     [SerializeField] private Animator playerAnim;
@@ -23,12 +23,13 @@ public class PlayerStateManager : MonoBehaviour
 
     private void Awake()
     {
-        runState = new RunState(this.playerMov, this.groundCollider);
+        runState = new RunState(this.playerMov, this.groundCollider, this.playerShoot);
         jumpState = new JumpState(this.playerMov, this.groundCollider);
         hurtState = new HurtState(this.playerAnim, this.playerRB);
     }
     void Start()
     {
+
         currentState = runState;
         currentState.EnterState(this);
     }

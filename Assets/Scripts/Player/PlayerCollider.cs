@@ -7,6 +7,7 @@ public class PlayerCollider : MonoBehaviour, ICollider
     [SerializeField] private Animator animator;
 
     private string colliderTag;
+
     public void GetHit()
     {
         if(colliderTag.Equals("Dagger"))
