@@ -266,6 +266,7 @@ MonoBehaviour:
   playerType: 0
   playerMovement: {fileID: 802344129530977131}
   playerShoot: {fileID: 3362876753447326818}
+  spriteRenderer: {fileID: 8757843599845629868}
 --- !u!114 &802344129530977131
 MonoBehaviour:
   m_ObjectHideFlags: 0

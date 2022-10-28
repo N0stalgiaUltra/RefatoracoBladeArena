@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerFactory : MonoBehaviour, IAbstractFactory<GameObject>
 {
-    [SerializeField] private GameObject[] playerPrefab;
+    [SerializeField] private GameObject[] playerPrefab = new GameObject[3];
+    [SerializeField] private Transform[] playerSpawn = new Transform[2];
     [SerializeField] private int playerIndex;
     [SerializeField] private int playerInputType;
 
@@ -24,7 +25,7 @@ public class PlayerFactory : MonoBehaviour, IAbstractFactory<GameObject>
         setup.Initialize(playerInputType);
         
         //instantiate prefab with player type already settled.
-        var aux = Instantiate(playerPrefab[playerInputType], transform);
+        var aux = Instantiate(playerPrefab[playerInputType], playerSpawn[playerInputType].position, Quaternion.identity);
         return aux;
     }
 

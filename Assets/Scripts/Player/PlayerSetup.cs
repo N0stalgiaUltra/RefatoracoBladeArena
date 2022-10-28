@@ -6,7 +6,7 @@ public class PlayerSetup : PlayerType
 {
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PlayerShoot playerShoot;
-    
+    [SerializeField] private SpriteRenderer spriteRenderer;
     public void Initialize(int i)
     {
         SetType(i);
@@ -14,6 +14,8 @@ public class PlayerSetup : PlayerType
         playerShoot.Setup(this.playerType);
         playerMovement.Setup(this.playerType);
 
+        if (this.playerType == TypePlayer.PLAYER2)
+            spriteRenderer.flipX = false;
     }
 
 
