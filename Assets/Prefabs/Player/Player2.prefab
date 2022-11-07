@@ -43,9 +43,12 @@ GameObject:
   - component: {fileID: 5174760509454315591}
   - component: {fileID: 5174760509454315584}
   - component: {fileID: 5174760509454315594}
+  - component: {fileID: 4500326554094491903}
+  - component: {fileID: 3012478204309558918}
   - component: {fileID: 2053016339}
   - component: {fileID: 2053016340}
   - component: {fileID: 2053016345}
+  - component: {fileID: 1412007359922620194}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -188,6 +191,39 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4500326554094491903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174760509454315585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e166d163f10e2b40b52740c65bd3f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 0
+  playerMovement: {fileID: 2053016340}
+  playerShoot: {fileID: 2053016345}
+  spriteRenderer: {fileID: 5174760509454315590}
+--- !u!114 &3012478204309558918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174760509454315585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e44ba46c2b4ab243a7fdc485d378f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMov: {fileID: 2053016340}
+  playerShoot: {fileID: 2053016345}
+  groundCollider: {fileID: 1468743372}
+  playerRB: {fileID: 5174760509454315591}
+  playerAnim: {fileID: 5174760509454315594}
 --- !u!114 &2053016339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,10 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   rb: {fileID: 5174760509454315591}
   animator: {fileID: 5174760509454315594}
-  groundCollider: {fileID: 0}
-  playerData: {fileID: 0}
+  groundCollider: {fileID: 1468743372}
+  playerData: {fileID: 11400000, guid: 02827ca33c0230b459e004c33d157043, type: 2}
 --- !u!114 &2053016345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,8 +266,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8102c0d147b136541a82c4ad9d37b8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   spawnDagger: {fileID: 5174760510111546114}
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 02827ca33c0230b459e004c33d157043, type: 2}
+--- !u!114 &1412007359922620194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174760509454315585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c70914508a03d047b2d947a181cb4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitsParent: {fileID: 5676352958739429466, guid: d6b5be3f39d578f47a1721bd9cc373c1, type: 3}
 --- !u!1 &5174760509571669740
 GameObject:
   m_ObjectHideFlags: 0

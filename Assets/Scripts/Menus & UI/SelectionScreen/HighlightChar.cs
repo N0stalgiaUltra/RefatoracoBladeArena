@@ -9,10 +9,6 @@ public class HighlightChar : MonoBehaviour
     [SerializeField] private RectTransform highlightP2;
 
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
         if (selectCharacterScreen.Count.Equals(2))

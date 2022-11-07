@@ -83,7 +83,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8757843599079645161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
   m_LocalPosition: {x: 0.478, y: 0.774, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 317b8365a4649ab459f6cb58ec8f9f18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.5, y: 1.5}
@@ -299,7 +299,6 @@ MonoBehaviour:
   playerType: 0
   spawnDagger: {fileID: 8757843599079645160}
   data: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
-  daggerPool: {fileID: 4830284301184549585, guid: 68ff97c77dc96f94f8630df80091b467, type: 3}
 --- !u!114 &981261600
 MonoBehaviour:
   m_ObjectHideFlags: 0
