@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < numPlayers; i++)
         {
-            //HARDCODED
+            //TODO: TRY CHANGE HARDCODED PART
 
             if (i == 0)
                 playerFactory.PlayerIndex = localMultiplayerData.charIndexPlayerOne;

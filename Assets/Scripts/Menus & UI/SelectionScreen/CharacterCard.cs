@@ -10,6 +10,7 @@ public class CharacterCard : MonoBehaviour
 
     [SerializeField] private Button thisButton;
     [SerializeField] private SelectCharacterScreen characterScreen;
+    [SerializeField] private HighlightChar highlightChar;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class CharacterCard : MonoBehaviour
     public void GetCharacter()
     {
         characterScreen.SetIndex(charData);
+        highlightChar.Enable(this.gameObject.GetComponent<RectTransform>().anchoredPosition);
     }
 
 }

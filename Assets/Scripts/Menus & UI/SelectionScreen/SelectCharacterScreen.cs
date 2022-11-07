@@ -49,7 +49,6 @@ public class SelectCharacterScreen : MonoBehaviour
             SceneManager.LoadScene(2);
         }
 
-
     }
 
     private void SetCharIndex(int count)
@@ -64,4 +63,5 @@ public class SelectCharacterScreen : MonoBehaviour
             return;
     }
 
+    public int Count { get => count; }
 }
