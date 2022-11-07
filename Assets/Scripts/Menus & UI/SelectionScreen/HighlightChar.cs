@@ -8,33 +8,31 @@ public class HighlightChar : MonoBehaviour
     [SerializeField] private RectTransform highlightP1;
     [SerializeField] private RectTransform highlightP2;
 
-    [SerializeField] private bool selected;
 
     private void Start()
     {
-        selected = true;
-        HighlightState();
     }
 
-    public void Enable(Vector2 cardTransform)
+    private void Update()
     {
-
         if (selectCharacterScreen.Count.Equals(2))
-            highlightP1.anchoredPosition = cardTransform;
-
+            HighlightState(true);
         else
-        {
-            highlightP2.anchoredPosition = cardTransform;
-            selected = false;
-        }
+            HighlightState(false);
 
-        HighlightState();
+
+    }
+    //se ele fica sem trocar, ele n muda
+    public void Enable(Vector2 cardTransform)
+    { 
+        highlightP1.anchoredPosition = cardTransform;
+        highlightP2.anchoredPosition = cardTransform;
     }
 
-    private void HighlightState()
+    private void HighlightState(bool value)
     {
-        highlightP1.gameObject.SetActive(selected);
-        highlightP2.gameObject.SetActive(!selected);
+        highlightP1.gameObject.SetActive(value);
+        highlightP2.gameObject.SetActive(!value);
 
     }
 }

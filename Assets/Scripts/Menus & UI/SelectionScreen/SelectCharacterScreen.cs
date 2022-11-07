@@ -14,7 +14,7 @@ public class SelectCharacterScreen : MonoBehaviour
     //como diferir quando temos multi e singleplayer? 
     [SerializeField] private bool localMultiplayer;
     [SerializeField] private int count;
-
+    public int countagain;
     private void Start()
     {
         //TODO: REMOVE
@@ -33,20 +33,22 @@ public class SelectCharacterScreen : MonoBehaviour
         this.characterIndex = data.cardData.CharIndex;
         
     }
+    private void Update()
+    {
+        if(count == 0)
+            SceneManager.LoadScene(2);
 
+    }
     private void ConfirmAction()
     {
-        
         if (count > 0)
         {
             SetCharIndex(count);
             count--;
-            print("Selected character: " + characterIndex);
         }
         else
         {
             confirmButton.interactable = false;
-            SceneManager.LoadScene(2);
         }
 
     }
