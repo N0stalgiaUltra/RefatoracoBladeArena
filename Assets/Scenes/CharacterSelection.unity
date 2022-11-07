@@ -628,6 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterIndex: 0
   confirmButton: {fileID: 1194197266}
+  localMultiplayerData: {fileID: 11400000, guid: 7e163ab45b582b14ab46fde038897783, type: 2}
   localMultiplayer: 1
   count: 0
 --- !u!1 &598578867
@@ -1050,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 568459801218854296, guid: 24ab36af05453a943b3272ec560c9cd1, type: 3}
       propertyPath: charData
       value: 
-      objectReference: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
+      objectReference: {fileID: 11400000, guid: 02827ca33c0230b459e004c33d157043, type: 2}
     - target: {fileID: 568459801218854296, guid: 24ab36af05453a943b3272ec560c9cd1, type: 3}
       propertyPath: characterScreen
       value: 
@@ -1261,6 +1262,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 603857658}
     m_Modifications:
+    - target: {fileID: 568459801218854296, guid: 24ab36af05453a943b3272ec560c9cd1, type: 3}
+      propertyPath: charData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
     - target: {fileID: 568459801218854296, guid: 24ab36af05453a943b3272ec560c9cd1, type: 3}
       propertyPath: characterScreen
       value: 

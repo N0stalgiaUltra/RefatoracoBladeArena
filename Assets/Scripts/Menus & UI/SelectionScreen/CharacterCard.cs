@@ -13,7 +13,7 @@ public class CharacterCard : MonoBehaviour
 
     void Start()
     {
-        mainSprite.sprite = charData.MainSprite;
+        mainSprite.sprite = charData.cardData.MainSprite.sprite;
         thisButton.onClick.AddListener(GetCharacter);
         
     }

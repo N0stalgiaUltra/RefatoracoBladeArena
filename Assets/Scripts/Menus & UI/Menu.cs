@@ -53,7 +53,7 @@ public class Menu : MonoBehaviour
     public void Iniciar()
     {
         FindObjectOfType<AudioManager>().Play("ClicaBotao");
-        SceneManager.LoadScene("01");
+        SceneManager.LoadScene(1);
     }
 
     public void Sair()

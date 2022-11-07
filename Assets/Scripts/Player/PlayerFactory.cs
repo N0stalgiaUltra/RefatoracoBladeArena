@@ -9,7 +9,6 @@ public class PlayerFactory : MonoBehaviour, IAbstractFactory<GameObject>
     [SerializeField] private Transform[] playerSpawn = new Transform[2];
     [SerializeField] private int playerIndex;
     [SerializeField] private int playerInputType;
-
     public int PlayerInputType
     {
         set
@@ -18,14 +17,20 @@ public class PlayerFactory : MonoBehaviour, IAbstractFactory<GameObject>
         }
     }
 
+    public int PlayerIndex
+    {
+        set => this.playerIndex = value;
+    }
+
     public GameObject GetNewInstance()
     {
+        print(playerIndex);
         // Change the input type inside the character prefab
-        var setup = playerPrefab[playerInputType].GetComponent<PlayerSetup>();
+        var setup = playerPrefab[playerIndex].GetComponent<PlayerSetup>();
         setup.Initialize(playerInputType);
         
         //instantiate prefab with player type already settled.
-        var aux = Instantiate(playerPrefab[playerInputType], playerSpawn[playerInputType].position, Quaternion.identity);
+        var aux = Instantiate(playerPrefab[playerIndex], playerSpawn[playerInputType].position, Quaternion.identity);
         return aux;
     }
 

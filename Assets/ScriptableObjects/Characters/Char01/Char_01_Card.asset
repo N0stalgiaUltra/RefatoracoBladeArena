@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e87ba43701c2e4097bed650d64ab70, type: 3}
-  m_Name: Char_02_Data
+  m_Script: {fileID: 11500000, guid: 80752d6774711334bae505e2d23f0bd0, type: 3}
+  m_Name: Char_01_Card
   m_EditorClassIdentifier: 
-  Velocity: 6
-  JumpTimer: 1
-  JumpFactor: 6
-  ShootRate: 3.5
-  MainSprite: {fileID: 21300000, guid: f8c250636fdee4446859162c7371711c, type: 3}
-  CharIndex: 1
+  MainSprite: {fileID: 8757843599845629868, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  CharIndex: 0

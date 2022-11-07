@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e87ba43701c2e4097bed650d64ab70, type: 3}
-  m_Name: Char_03_Data
+  m_Script: {fileID: 11500000, guid: 54c12d487029a6e46ae5f09b20f930bf, type: 3}
+  m_Name: Char_01_Prefab
   m_EditorClassIdentifier: 
-  Velocity: 3.75
-  JumpTimer: 1
-  JumpFactor: 7.5
-  ShootRate: 2
-  MainSprite: {fileID: 21300000, guid: 01828d3685cd5e143a57ea2ed5a07df5, type: 3}
-  CharIndex: 2
+  charPrefab: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}

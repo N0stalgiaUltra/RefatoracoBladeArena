@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectCharacterScreen : MonoBehaviour
 {
@@ -9,43 +10,58 @@ public class SelectCharacterScreen : MonoBehaviour
 
     [SerializeField] private Button confirmButton;
 
+    [SerializeField] private LocalMultiplayerData localMultiplayerData;
     //como diferir quando temos multi e singleplayer? 
     [SerializeField] private bool localMultiplayer;
     [SerializeField] private int count;
 
     private void Start()
     {
+        //TODO: REMOVE
+        
+
+        count = localMultiplayer ? 2 : 1;
+
+        PlayerPrefs.SetInt("PlayersNum", count);
+        PlayerPrefs.Save();
+
         confirmButton.onClick.AddListener(ConfirmAction); 
     }
 
     public void SetIndex(CharacterData data)
     {
-        this.characterIndex = data.CharIndex;
+        this.characterIndex = data.cardData.CharIndex;
         
     }
 
     private void ConfirmAction()
     {
-        if (count < 2)
+        
+        if (count > 0)
         {
-            count++;
-
-            if (localMultiplayer)
-            {
-                print("Selected character: " + characterIndex);
-                print(count);
-                //entra no single
-            }
-            else
-            {
-                print("Selected character: " + characterIndex);
-                //entra no lobby/partida
-            }
+            SetCharIndex(count);
+            count--;
+            print("Selected character: " + characterIndex);
         }
         else
+        {
             confirmButton.interactable = false;
+            SceneManager.LoadScene(2);
+        }
 
 
+    }
+
+    private void SetCharIndex(int count)
+    {
+        if (count == 2)
+            localMultiplayerData.charIndexPlayerOne = characterIndex;
+
+        else if (count == 1)
+            localMultiplayerData.charIndexPlayerTwo = characterIndex;
+
+        else
+            return;
     }
 
 }

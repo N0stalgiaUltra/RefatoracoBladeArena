@@ -32,9 +32,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private GameObject player;
+    [SerializeField] private LocalMultiplayerData localMultiplayerData;
+
+    private int numPlayers;
     private void Start()
     {
-        GameStart(true);
+        numPlayers = PlayerPrefs.GetInt("PlayersNum");
+
+        GameStart();
 
     }
     private void Update()
@@ -45,20 +50,27 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// TODO: Redo the summary for the GameStartMethod
     /// </summary>
-    public void GameStart(bool localMultiplayer) 
+    public void GameStart() 
     {
         //if true -> instantiate both players and set input;
         //if false -> get multiplayer setting for input
 
-        if (localMultiplayer)
+
+        for (int i = 0; i < numPlayers; i++)
         {
-            for (int i = 0; i < 2; i++)
-            {
-                playerFactory.PlayerInputType = i;
-                var aux = playerFactory.GetNewInstance();
+            //HARDCODED
+
+            if (i == 0)
+                playerFactory.PlayerIndex = localMultiplayerData.charIndexPlayerOne;
+            else
+                playerFactory.PlayerIndex = localMultiplayerData.charIndexPlayerTwo;
+
+            playerFactory.PlayerInputType = i;
+            var aux = playerFactory.GetNewInstance();
                 
-            }
         }
+        
+
 
         Time.timeScale = 1;
         AudioManager.instance.BackgroundSound();

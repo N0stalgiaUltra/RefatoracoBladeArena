@@ -623,6 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab:
   - {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  - {fileID: 5174760509454315585, guid: 9e130ab90183ef84ea146c7ca2733751, type: 3}
   - {fileID: 8757843599845629859, guid: 414848835b017144095abf06d161f7bb, type: 3}
   playerSpawn:
   - {fileID: 648246951}
@@ -2456,6 +2457,7 @@ MonoBehaviour:
   victoryScreen: {fileID: 228394988}
   playerFactory: {fileID: 369169965}
   player: {fileID: 8757843599845629859, guid: 1840304075f8e2f49b167ec5839bed2c, type: 3}
+  localMultiplayerData: {fileID: 11400000, guid: 7e163ab45b582b14ab46fde038897783, type: 2}
 --- !u!4 &1115228182
 Transform:
   m_ObjectHideFlags: 0
