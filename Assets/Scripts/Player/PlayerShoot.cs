@@ -34,7 +34,7 @@ public class PlayerShoot : PlayerInput
     private void Shoot()
     {
         daggerPool.DaggerSpawn(spawnDagger);
-        timer = data.shootRate;
+        timer = data.ShootRate;
     }
 
 }

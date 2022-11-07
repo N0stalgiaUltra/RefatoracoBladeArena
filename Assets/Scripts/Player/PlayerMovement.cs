@@ -23,7 +23,7 @@ public class PlayerMovement : PlayerInput
     public void Move(bool isGrounded)
     {
         animator.SetBool("estaChao", isGrounded);
-        rb.velocity = new Vector2(InputMove() * playerData.velocity, rb.velocity.y);
+        rb.velocity = new Vector2(InputMove() * playerData.Velocity, rb.velocity.y);
         
         if (Mathf.Abs(InputMove())> Mathf.Epsilon)
         {
@@ -44,10 +44,10 @@ public class PlayerMovement : PlayerInput
             if (InputJump() && isGrounded)
             {
                 animator.SetTrigger("pulo");
-                rb.velocity = new Vector2(rb.velocity.x, playerData.jumpFactor);
+                rb.velocity = new Vector2(rb.velocity.x, playerData.JumpFactor);
                 isGrounded = false;
                 animator.SetBool("estaChao", isGrounded);
-                jumpTimer = playerData.jumpTimer;
+                jumpTimer = playerData.JumpTimer;
             }
         }
     }

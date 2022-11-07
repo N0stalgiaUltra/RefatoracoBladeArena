@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44e87ba43701c2e4097bed650d64ab70, type: 3}
-  m_Name: Char_01_Data
+  m_Name: Char_02_Data
   m_EditorClassIdentifier: 
-  Velocity: 5
-  JumpTimer: 1.5
-  JumpFactor: 7.5
-  ShootRate: 3
-  MainSprite: {fileID: 21300000, guid: 3a5f73c4394892747b0779a2fc1dff16, type: 3}
-  CharIndex: 0
+  Velocity: 6
+  JumpTimer: 1
+  JumpFactor: 6
+  ShootRate: 3.5
+  MainSprite: {fileID: 21300000, guid: f8c250636fdee4446859162c7371711c, type: 3}
+  CharIndex: 1
