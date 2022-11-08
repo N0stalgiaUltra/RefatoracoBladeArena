@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e166d163f10e2b40b52740c65bd3f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   playerMovement: {fileID: 2053016340}
   playerShoot: {fileID: 2053016345}
   spriteRenderer: {fileID: 5174760509454315590}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   rb: {fileID: 5174760509454315591}
   animator: {fileID: 5174760509454315594}
   groundCollider: {fileID: 1468743372}
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8102c0d147b136541a82c4ad9d37b8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   spawnDagger: {fileID: 5174760510111546114}
   data: {fileID: 11400000, guid: 02827ca33c0230b459e004c33d157043, type: 2}
 --- !u!114 &1412007359922620194
@@ -405,7 +405,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5174760510111546115}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
   m_LocalPosition: {x: -0.48, y: 0.774, z: 0}
   m_LocalScale: {x: 0.91568, y: 0.98314, z: 1}
   m_Children: []

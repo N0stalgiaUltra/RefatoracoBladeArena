@@ -14,7 +14,10 @@ public class PlayerSetup : PlayerType
         playerMovement.Setup(this.playerType);
 
         if (this.playerType == TypePlayer.PLAYER2)
+        {
             spriteRenderer.flipX = false;
+            this.gameObject.tag = "Player2";
+        }
     }
 
 

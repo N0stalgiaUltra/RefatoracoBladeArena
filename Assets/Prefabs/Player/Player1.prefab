@@ -84,8 +84,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8757843599079645161}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
-  m_LocalPosition: {x: 0.478, y: 0.774, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.5, y: 0.774, z: 0}
+  m_LocalScale: {x: 0.91568, y: 0.98314, z: 1}
   m_Children: []
   m_Father: {fileID: 8757843599845629871}
   m_RootOrder: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 549140466}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e166d163f10e2b40b52740c65bd3f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   playerMovement: {fileID: 802344129530977131}
   playerShoot: {fileID: 3362876753447326818}
   spriteRenderer: {fileID: 8757843599845629868}
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a29bbcba5c6324449377b9062dc1880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   rb: {fileID: 8757843599845629869}
   animator: {fileID: 8757843599845629864}
   groundCollider: {fileID: 165310803}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8102c0d147b136541a82c4ad9d37b8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   spawnDagger: {fileID: 8757843599079645160}
   data: {fileID: 11400000, guid: 4ad09df451fc6a841a978dc295efdcc0, type: 2}
 --- !u!114 &981261600

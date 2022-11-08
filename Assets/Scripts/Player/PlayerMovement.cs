@@ -54,20 +54,10 @@ public class PlayerMovement : PlayerInput
 
     private void ChangeDirection(float input)
     {
-        if (this.playerType == TypePlayer.PLAYER1)
-        {
-            if (input > 0)
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            else if (input < 0)
-                transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else
-        {
-            if (input > 0)
-                transform.eulerAngles = new Vector3(0, 180, 0);
-            else if (input < 0)
-                transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+        if (input > 0)
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        else if (input < 0)
+            transform.eulerAngles = new Vector3(0, 0, 0);
     }
     void RunSoundEvent() => AudioManager.instance.RunSound();
 

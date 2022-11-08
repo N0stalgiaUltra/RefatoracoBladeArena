@@ -549,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3729627268164589001, guid: ab467b78b40a6184c9261d5a23c0cd7d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 640
+      value: 290
       objectReference: {fileID: 0}
     - target: {fileID: 3729627268164589001, guid: ab467b78b40a6184c9261d5a23c0cd7d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -753,6 +753,7 @@ MonoBehaviour:
   localMultiplayerData: {fileID: 11400000, guid: 7e163ab45b582b14ab46fde038897783, type: 2}
   localMultiplayer: 1
   count: 0
+  countagain: 0
 --- !u!1 &598578867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,7 +1257,6 @@ MonoBehaviour:
   selectCharacterScreen: {fileID: 465553937}
   highlightP1: {fileID: 688466495}
   highlightP2: {fileID: 210728861}
-  selected: 0
 --- !u!1 &1731751550
 GameObject:
   m_ObjectHideFlags: 0

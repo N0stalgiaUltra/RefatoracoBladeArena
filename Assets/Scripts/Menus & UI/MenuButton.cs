@@ -43,11 +43,10 @@ public class MenuButton : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
     private void Quit()
     {
-        print("sai do jogos");
         Application.Quit();
     }
 

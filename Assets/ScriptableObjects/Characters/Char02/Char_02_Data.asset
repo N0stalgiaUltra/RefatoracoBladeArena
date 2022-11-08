@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocity: 6
   JumpTimer: 1
-  JumpFactor: 6
+  JumpFactor: 7.5
   ShootRate: 3.5
   cardData: {fileID: 11400000, guid: 30aa10aecdfb9ef4fbce7bb973c59b86, type: 2}
-  prefabData: {fileID: 11400000, guid: a2fa82055858a6942b86d0e3581ce225, type: 2}
