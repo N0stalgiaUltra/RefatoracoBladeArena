@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour
 {
-    public enum ButtonType { OPENCLOSE, START, QUIT}
+    public enum ButtonType { OPENCLOSE, START, QUIT, MENU}
     public ButtonType buttonType;
 
     [SerializeField] private Button button;
@@ -21,6 +22,9 @@ public class MenuButton : MonoBehaviour
             case ButtonType.START:
                 button.onClick.AddListener(this.StartGame);
                 break;
+            case ButtonType.MENU:
+                button.onClick.AddListener(this.BackMenu);
+                break;
             case ButtonType.QUIT:
                 button.onClick.AddListener(this.Quit);
                 break;
@@ -30,9 +34,14 @@ public class MenuButton : MonoBehaviour
         }
     }
 
+    private void BackMenu()
+    {
+        AudioManager.instance.ClickButtonSound();
+        SceneManager.LoadScene(0);
+    }
+
     protected void OpenClose(bool active)
     {
-        print("click");
         AudioManager.instance.ClickButtonSound();
 
         if (active)
