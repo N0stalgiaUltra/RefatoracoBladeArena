@@ -3,10 +3,11 @@ using UnityEngine.Audio;
 using System;
 
 public class AudioManager : MonoBehaviour
-{   
-    public Som[] sons;
+{
+    public SoundClips[] soundClips;
 
     public static AudioManager instance;
+
     void Awake()
     {
         #region Singleton
@@ -20,10 +21,10 @@ public class AudioManager : MonoBehaviour
         }
         #endregion
 
-        foreach (Som s in sons)
+        foreach (SoundClips s in soundClips)
         {
             s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.som;
+            s.source.clip = s.clip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
@@ -32,12 +33,12 @@ public class AudioManager : MonoBehaviour
     
     public void Play(string nome)
     {
-        Som s = Array.Find(sons, som => som.nome == nome);
+        SoundClips s = Array.Find(soundClips, som => som.name == nome);
         s.source.Play();
     }
     public void Stop(string nome)
     {
-        Som s = Array.Find(sons, som => som.nome == nome);
+        SoundClips s = Array.Find(soundClips, som => som.name == nome);
         s.source.Stop();
     }
 

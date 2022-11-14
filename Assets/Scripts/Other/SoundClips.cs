@@ -3,10 +3,10 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class Som
+public class SoundClips
 {
-    public string nome;
-    public AudioClip som;
+    public string name;
+    public AudioClip clip;
 
     [Range(0f, 1f)]
     public float volume;

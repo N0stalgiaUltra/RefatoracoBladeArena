@@ -5,10 +5,17 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
+    [Header ("Game Manager")]
+    [SerializeField] private GameManager gameManager;
+
+    [Header ("Score Attributes")]
     [SerializeField] private int p1Score, p2Score;
+    [SerializeField] private int scoreToBeat; //can be in the config session
+
+
+    [Header ("UI References")]
     [SerializeField] private TextMeshProUGUI p1ScoreText, p2ScoreText;
 
-    [SerializeField] private int scoreToBeat;
 
     private void Start()
     {
@@ -30,9 +37,13 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// End the match when a player reaches the score to beat
+    /// </summary>
+    /// <param name="player"> player who won the match </param>
     private void End(int player)
     {
-        GameManager.Instance.GameVictory(player);
+        gameManager.GameVictory(player);
         p1Score = p2Score = 0;
     }
 

@@ -7,31 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    #region TODO: Remove Singleton
-    private static GameManager _instance;
-    public static GameManager Instance => _instance;
-
-    private void Awake() {
-        if(_instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-    #endregion
-
-    [Header("End Game Attributes")]
+    [Header("UI Elements")]
     [SerializeField] protected TextMeshProUGUI screenText;
-    [SerializeField] private GameObject victoryScreen;
-    
-    
-    [SerializeField] private PlayerFactory playerFactory;
-    // Start is called before the first frame update
 
-    [SerializeField] private GameObject player;
+    [Header("Player Factory")]
+    [SerializeField] private PlayerFactory playerFactory;
+
+    [Header("Victory Screen")]
+    [SerializeField] private GameObject victoryScreen;
+
+    [Header("Multiplayer Data")]
     [SerializeField] private LocalMultiplayerData localMultiplayerData;
 
     private int numPlayers;
@@ -43,20 +28,14 @@ public class GameManager : MonoBehaviour
         GameStart();
 
     }
-    private void Update()
-    {
 
-    }
 
     /// <summary>
-    /// TODO: Redo the summary for the GameStartMethod
+    /// Method called to start game, instantiating the players and setting the time to run normally
     /// </summary>
     public void GameStart() 
     {
-        //if true -> instantiate both players and set input;
-        //if false -> get multiplayer setting for input
-
-
+        
         for (int i = 0; i < numPlayers; i++)
         {
             //TODO: TRY CHANGE HARDCODED PART
@@ -67,7 +46,7 @@ public class GameManager : MonoBehaviour
                 playerFactory.PlayerIndex = localMultiplayerData.charIndexPlayerTwo;
 
             playerFactory.PlayerInputType = i;
-            var aux = playerFactory.GetNewInstance();
+            playerFactory.GetNewInstance();
                 
         }
         
@@ -97,11 +76,6 @@ public class GameManager : MonoBehaviour
         screenText.text = player == 1 ? "Player One Wins" : "Player Two Wins";
 
         GameEnd();
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
     
 }
