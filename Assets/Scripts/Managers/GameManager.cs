@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     [Header("End Game Attributes")]
     [SerializeField] protected TextMeshProUGUI screenText;
-    [SerializeField] private VictoryScreen victoryScreen;
+    [SerializeField] private GameObject victoryScreen;
     
     
     [SerializeField] private PlayerFactory playerFactory;
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         numPlayers = PlayerPrefs.GetInt("PlayersNum");
+        victoryScreen.SetActive(false);
 
         GameStart();
 
@@ -92,7 +93,7 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.VictorySound();
         
-        victoryScreen.Setup();
+        victoryScreen.SetActive(true);
         screenText.text = player == 1 ? "Player One Wins" : "Player Two Wins";
 
         GameEnd();

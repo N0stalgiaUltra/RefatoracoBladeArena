@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controls the buttons behaviour 
+/// </summary>
 public class MenuButton : MonoBehaviour
 {
     public enum ButtonType { OPENCLOSE, START, QUIT, MENU}
@@ -34,13 +37,11 @@ public class MenuButton : MonoBehaviour
         }
     }
 
-    private void BackMenu()
-    {
-        AudioManager.instance.ClickButtonSound();
-        SceneManager.LoadScene(0);
-    }
-
-    protected void OpenClose(bool active)
+    /// <summary>
+    /// Open or Close an active object in scene
+    /// </summary>
+    /// <param name="active"> value of the object state in the scene</param>
+    private void OpenClose(bool active)
     {
         AudioManager.instance.ClickButtonSound();
 
@@ -50,10 +51,26 @@ public class MenuButton : MonoBehaviour
             objectControlled.SetActive(true);
     }
 
+    /// <summary>
+    /// Return to menu
+    /// </summary>
+    private void BackMenu()
+    {
+        AudioManager.instance.ClickButtonSound();
+        SceneManager.LoadScene(0);
+    }
+
+    /// <summary>
+    /// Start the game
+    /// </summary>
     private void StartGame()
     {
         SceneManager.LoadScene(1);
     }
+
+    /// <summary>
+    /// Quit the game
+    /// </summary>
     private void Quit()
     {
         Application.Quit();

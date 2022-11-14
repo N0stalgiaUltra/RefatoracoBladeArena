@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private bool estaPausado;
+    private bool isPaused;
     [SerializeField] private GameObject pauseMenu;
 
     [Header("Buttons Reference")]
@@ -32,18 +32,18 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     private void CheckPause()
     {
-        if (!estaPausado)
+        if (!isPaused)
         {
             AudioManager.instance.OpenUISound();
             pauseMenu.SetActive(true);
-            estaPausado = true;
+            isPaused = true;
             Time.timeScale = 0;
         }
         else
         {
             Time.timeScale = 1;
             pauseMenu.SetActive(false);
-            estaPausado = false;
+            isPaused = false;
         }
     }
 
